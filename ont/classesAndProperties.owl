@@ -35,6 +35,12 @@
             rdfs:range xsd:integer .
 
 
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#areCookiesEnabled
+:areCookiesEnabled rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :WebBrowser ;
+                   rdfs:range xsd:boolean .
+
+
 ###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#aspectRatio
 :aspectRatio rdf:type owl:DatatypeProperty ;
              rdfs:domain :Monitor ;
@@ -44,6 +50,12 @@
 ###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#baseClock
 :baseClock rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :cpuFrequency .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#browserEngine
+:browserEngine rdf:type owl:DatatypeProperty ;
+               rdfs:domain :WebBrowser ;
+               rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#cameraResolution
@@ -236,6 +248,49 @@
              rdfs:range xsd:double .
 
 
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredCPUCoresNum
+:requiredCPUCoresNum rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Application ,
+                                 :OperatingSystem ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredCPUSpeed
+:requiredCPUSpeed rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Application ,
+                              :OperatingSystem ;
+                  rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredGPUMemory
+:requiredGPUMemory rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Application ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredMemoryRAM
+:requiredMemoryRAM rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Application ,
+                               :OperatingSystem ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredOS
+:requiredOS rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Application ,
+                        :Driver ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredStorageSpaceGB
+:requiredStorageSpaceGB rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :SoftwareComponent ;
+                        rdfs:range xsd:integer .
+
+
 ###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#sataPorts
 :sataPorts rdf:type owl:DatatypeProperty ;
            rdfs:domain :Motherboard ;
@@ -265,11 +320,29 @@
          rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#supportsSubtitles
+:supportsSubtitles rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :VideoPlayer ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#supportsVPN
+:supportsVPN rdf:type owl:DatatypeProperty ;
+             rdfs:domain :WebBrowser ;
+             rdfs:range xsd:boolean .
+
+
 ###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#threadNumber
 :threadNumber rdf:type owl:DatatypeProperty ;
               rdfs:domain :CPU ,
                           :GraphicsCard ;
               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#tracksHistory
+:tracksHistory rdf:type owl:DatatypeProperty ;
+               rdfs:domain :WebBrowser ;
+               rdfs:range xsd:boolean .
 
 
 ###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#usbSpeed
@@ -291,6 +364,18 @@
 :videoInput rdf:type owl:DatatypeProperty ;
             rdfs:domain :Monitor ;
             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#videoSpeedControl
+:videoSpeedControl rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :VideoPlayer ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#videoSupportingFormat
+:videoSupportingFormat rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :VideoPlayer ;
+                       rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#voltage
