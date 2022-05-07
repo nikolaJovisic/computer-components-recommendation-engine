@@ -12,6 +12,10 @@
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#AGE-OF-EMPIRES
+:AGE-OF-EMPIRES rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#AMD-Radeon-RX-6500-XT
 :AMD-Radeon-RX-6500-XT rdf:type owl:NamedIndividual .
 
@@ -20,12 +24,40 @@
 :AMD-Radeon-RX-6700-XT rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARCH-LINUX
+:ARCH-LINUX rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARCTIC-Freezer-A35
 :ARCTIC-Freezer-A35 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARMAGGEDDON-VOLTRON-BRONZE-235FX
 :ARMAGGEDDON-VOLTRON-BRONZE-235FX rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED
+:ASSASSINS-CREED rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED-BROTHERHOOD
+:ASSASSINS-CREED-BROTHERHOOD rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED-ORIGIN
+:ASSASSINS-CREED-ORIGIN rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED-REVALATIONS
+:ASSASSINS-CREED-REVALATIONS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED2
+:ASSASSINS-CREED2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED3
+:ASSASSINS-CREED3 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-PRIME-B560-PLUS
@@ -46,6 +78,30 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-TUF-Z590-PLUS
 :ASUS-TUF-Z590-PLUS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#BS-PLAYER
+:BS-PLAYER rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY-MODERN-WARFARE
+:CALL-OF-DUTY-MODERN-WARFARE rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY1
+:CALL-OF-DUTY1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY2
+:CALL-OF-DUTY2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY3
+:CALL-OF-DUTY3 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY4
+:CALL-OF-DUTY4 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CHIEFTEC-GPE-500S-500W
@@ -120,6 +176,46 @@
 :Corsair_K2 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-AW2521
+:DELL-AW2521 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-E2723HN
+:DELL-E2723HN rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-P2423
+:DELL-P2423 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-P2722H
+:DELL-P2722H rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-P3223DE
+:DELL-P3223DE rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-S2422HG
+:DELL-S2422HG rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-S2721HGF
+:DELL-S2721HGF rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-S2721HS
+:DELL-S2721HS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-SE2422H
+:DELL-SE2422H rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-U2723QE
+:DELL-U2723QE rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Dual-Radeon-RX-6500-XT
 :Dual-Radeon-RX-6500-XT rdf:type owl:NamedIndividual .
 
@@ -164,20 +260,68 @@
 :GIGABYTE-Z690 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GNOME-PLAYER
+:GNOME-PLAYER rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTA-SAN-ANDREAS
+:GTA-SAN-ANDREAS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTA-VICE-CITY
+:GTA-VICE-CITY rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTA1
+:GTA1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTA2
+:GTA2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTA3
+:GTA3 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTA4
+:GTA4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTA5
+:GTA5 rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1060
 :GTX-1060 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1060-driver
+:GTX-1060-driver rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1080
 :GTX-1080 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1080-driver
+:GTX-1080-driver rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1080Ti
 :GTX-1080Ti rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1080Ti-driver
+:GTX-1080Ti-driver rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1660Ti
 :GTX-1660Ti rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1660Ti-driver
+:GTX-1660Ti-driver rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-3080
@@ -232,6 +376,10 @@
 :JBL-QUANTUM-DUO rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#KALI-LINUX
+:KALI-LINUX rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Kingston-DD3-4GB
 :Kingston-DD3-4GB rdf:type owl:NamedIndividual .
 
@@ -242,6 +390,86 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Kingston-DD5-16GB
 :Kingston-DD5-16GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-ALMA
+:LINUX-ALMA rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-ASIANUX
+:LINUX-ASIANUX rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-CLEAROS
+:LINUX-CLEAROS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-FERMI
+:LINUX-FERMI rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-MINT
+:LINUX-MINT rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-ORACLE
+:LINUX-ORACLE rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-RED-HAT
+:LINUX-RED-HAT rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LINUX-ROCKY
+:LINUX-ROCKY rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-K400
+:LOGITECH-K400 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-M330
+:LOGITECH-M330 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-M330-driver
+:LOGITECH-M330-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-MASTER
+:LOGITECH-MASTER rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-MASTER-driver
+:LOGITECH-MASTER-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-MK-220
+:LOGITECH-MK-220 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-MK-220-driver
+:LOGITECH-MK-220-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-MK270
+:LOGITECH-MK270 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-MX-ANYWHERE
+:LOGITECH-MX-ANYWHERE rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-MX-MASTER-3
+:LOGITECH-MX-MASTER-3 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-POPKEYS
+:LOGITECH-POPKEYS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#LOGITECH-POPKEYS-driver
+:LOGITECH-POPKEYS-driver rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#MIS-MEG-CORELIQUID-S360
@@ -256,12 +484,76 @@
 :MWE_GOLD_1050 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#NEED-FOR-SPEED-CARBON
+:NEED-FOR-SPEED-CARBON rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#NEED-FOR-SPEED-UNDERGROUND
+:NEED-FOR-SPEED-UNDERGROUND rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#NJOY-Dawn-550
 :NJOY-Dawn-550 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#NZXT-Kraken-Z53
 :NZXT-Kraken-Z53 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-CANON-MG2550S
+:PRINTER-CANON-MG2550S rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-CANON-MG2550S-driver
+:PRINTER-CANON-MG2550S-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-EPSON-L805
+:PRINTER-EPSON-L805 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-EPSON-L805-driver
+:PRINTER-EPSON-L805-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-EPSONL1210
+:PRINTER-EPSONL1210 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-EPSONL1210-driver
+:PRINTER-EPSONL1210-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-HP-107A
+:PRINTER-HP-107A rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-HP-107A-driver
+:PRINTER-HP-107A-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-HP-M203DN
+:PRINTER-HP-M203DN rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-HP107W
+:PRINTER-HP107W rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-HP107W-driver
+:PRINTER-HP107W-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-KYOCERA-PRI01531
+:PRINTER-KYOCERA-PRI01531 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-PIXMAG640
+:PRINTER-PIXMAG640 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#PRINTER-XEROXB230
+:PRINTER-XEROXB230 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Patriot-DDR3-8GB
@@ -274,6 +566,26 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Pentium-Gold-G6400
 :Pentium-Gold-G6400 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#RAMPAGE-KB-R90
+:RAMPAGE-KB-R90 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#RAPOO-M200
+:RAPOO-M200 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#RAPOO-M300
+:RAPOO-M300 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#RAPOO-M305
+:RAPOO-M305 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#REDRAGON-K535
+:REDRAGON-K535 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Ryzen5-5600
@@ -314,6 +626,58 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SAMSUNG-SSD-970-EVO-PLUS-1TB
 :SAMSUNG-SSD-970-EVO-PLUS-1TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-DS-870
+:SCANNER-DS-870 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-DS-870-driver
+:SCANNER-DS-870-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-EPSON-DS-770II
+:SCANNER-EPSON-DS-770II rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-EPSONV19
+:SCANNER-EPSONV19 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-EPSONV19-driver
+:SCANNER-EPSONV19-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-LIDE300
+:SCANNER-LIDE300 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-LIDE300-driver
+:SCANNER-LIDE300-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-WORKFORCE-DS410
+:SCANNER-WORKFORCE-DS410 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-WORKFORCE-DS410-driver
+:SCANNER-WORKFORCE-DS410-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-WORKFORCE-ES
+:SCANNER-WORKFORCE-ES rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-WORKFORCE-ES-driver
+:SCANNER-WORKFORCE-ES-driver rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-XL-626A
+:SCANNER-XL-626A rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SCANNER-XL-626A-driver
+:SCANNER-XL-626A-driver rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SEAGATE-6TB
@@ -364,6 +728,18 @@
 :TRUST-GXT-629 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#UBUNTU
+:UBUNTU rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#UNIX
+:UNIX rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#VLC-PLAYER
+:VLC-PLAYER rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WD-Blue-SN550-SSD-500GB
 :WD-Blue-SN550-SSD-500GB rdf:type owl:NamedIndividual .
 
@@ -374,6 +750,46 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WD-Green-SSD-240GB
 :WD-Green-SSD-240GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS-ME
+:WINDOWS-ME rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS-MEDIA-PLAYER
+:WINDOWS-MEDIA-PLAYER rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS-VISTA
+:WINDOWS-VISTA rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS-XP
+:WINDOWS-XP rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS10
+:WINDOWS10 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS11
+:WINDOWS11 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS7
+:WINDOWS7 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS8
+:WINDOWS8 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS95
+:WINDOWS95 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WINDOWS98
+:WINDOWS98 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#XG750-750W
@@ -388,12 +804,24 @@
 :i3-12100 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i3-12100-driver
+:i3-12100-driver rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i3-6100
 :i3-6100 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i3-6100-driver
+:i3-6100-driver rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i5-10600
 :i5-10600 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i5-10600-driver
+:i5-10600-driver rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i5-8400
