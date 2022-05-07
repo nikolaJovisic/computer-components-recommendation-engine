@@ -12,12 +12,156 @@
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#AMD-Radeon-RX-6500-XT
+:AMD-Radeon-RX-6500-XT rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#AMD-Radeon-RX-6700-XT
+:AMD-Radeon-RX-6700-XT rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARCTIC-Freezer-A35
+:ARCTIC-Freezer-A35 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARMAGGEDDON-VOLTRON-BRONZE-235FX
+:ARMAGGEDDON-VOLTRON-BRONZE-235FX rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-PRIME-B560-PLUS
+:ASUS-PRIME-B560-PLUS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-PRIME-Z690M-PLUS
+:ASUS-PRIME-Z690M-PLUS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-TUF-B560M-PLUS
+:ASUS-TUF-B560M-PLUS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-TUF-B660-PLUS
+:ASUS-TUF-B660-PLUS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-TUF-Z590-PLUS
+:ASUS-TUF-Z590-PLUS rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CHIEFTEC-GPE-500S-500W
+:CHIEFTEC-GPE-500S-500W rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-C1
+:COOLER-MASTER-C1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-C2
+:COOLER-MASTER-C2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERAIR-G100M
+:COOLER-MASTER-MASTERAIR-G100M rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERAIR-MA610P
+:COOLER-MASTER-MASTERAIR-MA610P rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERBOX-K501L
+:COOLER-MASTER-MASTERBOX-K501L rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERBOX-NR200P
+:COOLER-MASTER-MASTERBOX-NR200P rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MWE-750-BRONZE-V2
+:COOLER-MASTER-MWE-750-BRONZE-V2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER_MASTER-MWE-850-GOLD-V2
+:COOLER_MASTER-MWE-850-GOLD-V2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CORSAIR-SSD-240GB
+:CORSAIR-SSD-240GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CORSAIR-SSD-960GB
+:CORSAIR-SSD-960GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-2TB
+:CRUCIAL-SSD-2TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-P5-Plus-1TB
+:CRUCIAL-SSD-P5-Plus-1TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-P5-Plus-500GB
+:CRUCIAL-SSD-P5-Plus-500GB rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Corsair-DDR4-16GB
 :Corsair-DDR4-16GB rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Corsair-DDR4-8GB
 :Corsair-DDR4-8GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Corsair-K1
+:Corsair-K1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Corsair_K2
+:Corsair_K2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Dual-Radeon-RX-6500-XT
+:Dual-Radeon-RX-6500-XT rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#FSP-CMT-520-Plus
+:FSP-CMT-520-Plus rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#FSP-CST350-Plus
+:FSP-CST350-Plus rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#FSP-HEXA-85-PRO-650W
+:FSP-HEXA-85-PRO-650W rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#FSP-HYDRO-PTM-650W
+:FSP-HYDRO-PTM-650W rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#FSP-HYDRO-PTM-PRO-1000W
+:FSP-HYDRO-PTM-PRO-1000W rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#FSP-Hydro-550W
+:FSP-Hydro-550W rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#FST-CMT340-Plus
+:FST-CMT340-Plus rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GIGABYTE-B660
+:GIGABYTE-B660 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GIGABYTE-X570S
+:GIGABYTE-X570S rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GIGABYTE-Z690
+:GIGABYTE-Z690 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GTX-1060
@@ -48,6 +192,22 @@
 :GTX-950 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GeForce-GT-1030
+:GeForce-GT-1030 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GeForce-GTX-1660
+:GeForce-GTX-1660 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GeForce-RTX-3080-MASTER
+:GeForce-RTX-3080-MASTER rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#GeForce-RTX3080
+:GeForce-RTX3080 rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Intel-H87
 :Intel-H87 rdf:type owl:NamedIndividual .
 
@@ -68,6 +228,10 @@
 :Intel-Z370Express rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#JBL-QUANTUM-DUO
+:JBL-QUANTUM-DUO rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Kingston-DD3-4GB
 :Kingston-DD3-4GB rdf:type owl:NamedIndividual .
 
@@ -80,6 +244,10 @@
 :Kingston-DD5-16GB rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#MIS-MEG-CORELIQUID-S360
+:MIS-MEG-CORELIQUID-S360 rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#MWE_BRONZE_550W
 :MWE_BRONZE_550W rdf:type owl:NamedIndividual .
 
@@ -88,12 +256,80 @@
 :MWE_GOLD_1050 rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#NJOY-Dawn-550
+:NJOY-Dawn-550 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#NZXT-Kraken-Z53
+:NZXT-Kraken-Z53 rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Patriot-DDR3-8GB
 :Patriot-DDR3-8GB rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Patriot-DDR4-32GB
 :Patriot-DDR4-32GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Pentium-Gold-G6400
+:Pentium-Gold-G6400 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Ryzen5-5600
+:Ryzen5-5600 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Ryzen5-5600G
+:Ryzen5-5600G rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Ryzen7-3700X
+:Ryzen7-3700X rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Ryzen7-3800X
+:Ryzen7-3800X rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Ryzen9-5900
+:Ryzen9-5900 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Ryzen9-5950X
+:Ryzen9-5950X rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SAMSON-MediaOneBT4
+:SAMSON-MediaOneBT4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SAMSON-Resolv-SE6
+:SAMSON-Resolv-SE6 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SAMSUNG-2TB-SSD-970
+:SAMSUNG-2TB-SSD-970 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SAMSUNG-SSD-970-EVO-PLUS-1TB
+:SAMSUNG-SSD-970-EVO-PLUS-1TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SEAGATE-6TB
+:SEAGATE-6TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SEASONIC-PRIME-1300-GOLD
+:SEASONIC-PRIME-1300-GOLD rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SILICON-POWER-SSD-256GB
+:SILICON-POWER-SSD-256GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#SONIC-GEAR-SPACE-5
+:SONIC-GEAR-SPACE-5 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Serial-ATA-1000GB
@@ -112,6 +348,34 @@
 :Serial-ATA-500GB rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#TOSHIBA-P300-1TB
+:TOSHIBA-P300-1TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#TOSHIBA-X300-8TB
+:TOSHIBA-X300-8TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#TRUST-GXT-628
+:TRUST-GXT-628 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#TRUST-GXT-629
+:TRUST-GXT-629 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WD-Blue-SN550-SSD-500GB
+:WD-Blue-SN550-SSD-500GB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WD-GOLD-14TB
+:WD-GOLD-14TB rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#WD-Green-SSD-240GB
+:WD-Green-SSD-240GB rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#XG750-750W
 :XG750-750W rdf:type owl:NamedIndividual .
 
@@ -120,8 +384,16 @@
 :XG850-850W rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i3-12100
+:i3-12100 rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i3-6100
 :i3-6100 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i5-10600
+:i5-10600 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i5-8400
@@ -138,6 +410,18 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i7-8700k
 :i7-8700k rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#i9-12900KF
+:i9-12900KF rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#nVidia-GeForce-GTX-1050Ti
+:nVidia-GeForce-GTX-1050Ti rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#nvida-GeForce-RTX-2060
+:nvida-GeForce-RTX-2060 rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
