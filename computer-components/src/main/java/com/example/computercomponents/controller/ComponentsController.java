@@ -17,6 +17,6 @@ public class ComponentsController {
     @PostMapping()
     public ResponseEntity<String> getComponent(@RequestBody String query) {
         componentsService.LoadOntology(query);
-        return ResponseEntity.ok("Hello world");
+        return ResponseEntity.ok("Query performed successfully");
     }
 }

@@ -44,6 +44,7 @@ public class ComponentsService {
     }
 
     public void PrintQuery(ResultSet resultSet){
+        System.out.println("################ QUERY RESULT #######################");
         while (resultSet.hasNext()) {
             QuerySolution solution = resultSet.nextSolution();
             System.out.println(solution);
@@ -51,6 +52,7 @@ public class ComponentsService {
     }
 
     private static void printStatements(Model model) {
+        System.out.println("################ MODEL #######################");
         StmtIterator iter = model.listStatements();
         while (iter.hasNext()) {
             Statement stmt = iter.nextStatement();
@@ -67,6 +69,7 @@ public class ComponentsService {
             }
             System.out.println(" .");
         }
+        System.out.println("\n\n");
     }
 
 }
