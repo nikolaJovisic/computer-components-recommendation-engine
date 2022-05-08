@@ -2,9 +2,7 @@ package com.example.computercomponents.controller;
 
 import com.example.computercomponents.service.ComponentsService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/components")
@@ -16,9 +14,9 @@ public class ComponentsController {
         this.componentsService = componentsService;
     }
 
-    @GetMapping()
-    public ResponseEntity<String> getComponent() {
-        ComponentsService.Exec();
+    @PostMapping()
+    public ResponseEntity<String> getComponent(@RequestBody String query) {
+        componentsService.LoadOntology(query);
         return ResponseEntity.ok("Hello world");
     }
 }

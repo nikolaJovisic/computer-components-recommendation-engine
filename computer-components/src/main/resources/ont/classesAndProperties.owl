@@ -1,0 +1,997 @@
+@prefix : <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3> .
+
+<http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseCompatibleWithMotherboard
+:caseCompatibleWithMotherboard rdf:type owl:ObjectProperty ;
+                               rdfs:domain :Case ;
+                               rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleAudio
+:compatibleAudio rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :compatibleWithMotherboard ;
+                 rdfs:domain :AudioComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleBluetoothDriver
+:compatibleBluetoothDriver rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :compatibleWithOS ;
+                           rdfs:domain :BluetoothDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleCPU
+:compatibleCPU rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :compatibleWithMotherboard ;
+               rdfs:domain :CPU .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleCooler
+:compatibleCooler rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :compatibleWithMotherboard ;
+                  rdfs:domain :CoolingSystem .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleGPU
+:compatibleGPU rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :compatibleWithMotherboard ;
+               rdfs:domain :GraphicsCard .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleHDD
+:compatibleHDD rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :compatibleWithMotherboard ;
+               rdfs:domain :HDD .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleHDDDriver
+:compatibleHDDDriver rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :compatibleWithOS ;
+                     rdfs:domain :HDDDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleKeyboardDriver
+:compatibleKeyboardDriver rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :compatibleWithOS ;
+                          rdfs:domain :KeyboardDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMicrophone
+:compatibleMicrophone rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :compatibleWithMotherboard ;
+                      rdfs:domain :Microphone .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor
+:compatibleMonitor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :compatibleWithMotherboard ;
+                   rdfs:domain :Monitor .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMouseDriver
+:compatibleMouseDriver rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :compatibleWithOS ;
+                       rdfs:domain :MouseDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleNetworkDriver
+:compatibleNetworkDriver rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :compatibleWithOS ;
+                         rdfs:domain :NetworkDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatiblePowerSupply
+:compatiblePowerSupply rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :compatibleWithMotherboard ;
+                       rdfs:domain :PowerSupply .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatiblePrinterDriver
+:compatiblePrinterDriver rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :compatibleWithOS ;
+                         rdfs:domain :PrinterDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleRAM
+:compatibleRAM rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :compatibleWithMotherboard ;
+               rdfs:domain :RAM .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD
+:compatibleSSD rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :compatibleWithMotherboard ;
+               rdfs:domain :SSD .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSDDriver
+:compatibleSSDDriver rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :compatibleWithOS ;
+                     rdfs:domain :SSDDrIver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleScannerDriver
+:compatibleScannerDriver rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :compatibleWithOS ;
+                         rdfs:domain :ScannerDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSoundDriver
+:compatibleSoundDriver rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :compatibleWithOS ;
+                       rdfs:domain :SoundDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleTVCardDriver
+:compatibleTVCardDriver rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :compatibleWithOS ;
+                        rdfs:domain :TVCardDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleUSB
+:compatibleUSB rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :compatibleWithMotherboard ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :DockingStation
+                                           :Keyboard
+                                           :Mouse
+                                           :Printer
+                                           :Projector
+                                           :Scanner
+                                         )
+                           ] .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleVideoDriver
+:compatibleVideoDriver rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :compatibleWithOS ;
+                       rdfs:domain :VideoDriver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleWithMotherboard
+:compatibleWithMotherboard rdf:type owl:ObjectProperty ;
+                           rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleWithOS
+:compatibleWithOS rdf:type owl:ObjectProperty ;
+                  rdfs:range :OperatingSystem .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleWithVideoGame
+:compatibleWithVideoGame rdf:type owl:ObjectProperty ;
+                         rdfs:range :VideoGame .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#computerHasCase
+:computerHasCase rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Computer ;
+                 rdfs:range :Case .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#monitorCompatibleWithGPU
+:monitorCompatibleWithGPU rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Monitor ;
+                          rdfs:range :GraphicsCard .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#vgCompatibleCPU
+:vgCompatibleCPU rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :compatibleWithVideoGame ;
+                 rdfs:domain :CPU .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#vgCompatibleGPU
+:vgCompatibleGPU rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :compatibleWithVideoGame ;
+                 rdfs:domain :GraphicsCard .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#vgCompatibleOS
+:vgCompatibleOS rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :compatibleWithVideoGame ;
+                rdfs:domain :OperatingSystem .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#vgCompatiblePersistentMemory
+:vgCompatiblePersistentMemory rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :compatibleWithVideoGame ;
+                              rdfs:domain :PersistentMemory .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#vgCompatibleRAM
+:vgCompatibleRAM rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :compatibleWithVideoGame ;
+                 rdfs:domain :RAM .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#DDRClass
+:DDRClass rdf:type owl:DatatypeProperty ;
+          rdfs:domain :OperatingMemory ;
+          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#DPI
+:DPI rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Mouse .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#DPIMaximum
+:DPIMaximum rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :DPI ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#DPIMinimum
+:DPIMinimum rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :DPI ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#areCookiesEnabled
+:areCookiesEnabled rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :WebBrowser ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#aspectRatio
+:aspectRatio rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Monitor ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#baseClock
+:baseClock rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :cpuFrequency .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#browserEngine
+:browserEngine rdf:type owl:DatatypeProperty ;
+               rdfs:domain :WebBrowser ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#cameraResolution
+:cameraResolution rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Camera ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseType
+:caseType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Case ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#clockSpeed
+:clockSpeed rdf:type owl:DatatypeProperty ;
+            rdfs:domain :GraphicsCard ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#componentName
+:componentName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Component ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#componentPrice
+:componentPrice rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Component ;
+                rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#computerPrice
+:computerPrice rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Computer ;
+               rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coolerType
+:coolerType rdf:type owl:DatatypeProperty ;
+            rdfs:domain :CoolingSystem ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coreNumber
+:coreNumber rdf:type owl:DatatypeProperty ;
+            rdfs:domain :CPU ,
+                        :GraphicsCard ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#cpuCacheMemory
+:cpuCacheMemory rdf:type owl:DatatypeProperty ;
+                rdfs:domain :CPU ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#cpuFrequency
+:cpuFrequency rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CPU .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#cpuHasGpu
+:cpuHasGpu rdf:type owl:DatatypeProperty ;
+           rdfs:domain :CPU ;
+           rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch
+:diagonalInch rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Monitor ;
+              rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#dimension
+:dimension rdf:type owl:DatatypeProperty ;
+           rdfs:domain :HardwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#frequencyMaximumHz
+:frequencyMaximumHz rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :frequencyResponse ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#frequencyMinimumHz
+:frequencyMinimumHz rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :frequencyResponse ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#frequencyResponse
+:frequencyResponse rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :AudioComponent ,
+                               :Microphone .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#gpuCooling
+:gpuCooling rdf:type owl:DatatypeProperty ;
+            rdfs:domain :GraphicsCard ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#hashRate
+:hashRate rdf:type owl:DatatypeProperty ;
+          rdfs:domain :CPU ,
+                      :GraphicsCard ;
+          rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#height
+:height rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :dimension ;
+        rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#horizontalPixelNum
+:horizontalPixelNum rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :screenResolution ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#keysType
+:keysType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Keyboard ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#length
+:length rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :dimension ;
+        rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#lumens
+:lumens rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Projector ;
+        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#maxClock
+:maxClock rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :cpuFrequency ;
+          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize
+:memorySize rdf:type owl:DatatypeProperty ;
+            rdfs:domain :GraphicsCard ,
+                        :Memory ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySpeed
+:memorySpeed rdf:type owl:DatatypeProperty ;
+             rdfs:domain :PersistentMemory .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#mouseSensor
+:mouseSensor rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Mouse ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#noiseLevel
+:noiseLevel rdf:type owl:DatatypeProperty ;
+            rdfs:domain :CoolingSystem ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#printerColored
+:printerColored rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Printer ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#printerType
+:printerType rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Printer ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ramFrequency
+:ramFrequency rdf:type owl:DatatypeProperty ;
+              rdfs:domain :RAM ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ramSlotNumber
+:ramSlotNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain :RAM ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#readSpeed
+:readSpeed rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :memorySpeed ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#refreshRate
+:refreshRate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Monitor ;
+             rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredCPUCoresNum
+:requiredCPUCoresNum rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Application ,
+                                 :OperatingSystem ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredCPUSpeed
+:requiredCPUSpeed rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Application ,
+                              :OperatingSystem ;
+                  rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredGPUMemory
+:requiredGPUMemory rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Application ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredMemoryRAM
+:requiredMemoryRAM rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Application ,
+                               :OperatingSystem ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredOS
+:requiredOS rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Application ,
+                        :Driver ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#requiredStorageSpaceGB
+:requiredStorageSpaceGB rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :SoftwareComponent ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#sataPorts
+:sataPorts rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Motherboard ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#scannerOutputResolution
+:scannerOutputResolution rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Scanner ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#screenResolution
+:screenResolution rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Monitor .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#senstitivityDb
+:senstitivityDb rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Microphone ;
+                rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ssdType
+:ssdType rdf:type owl:DatatypeProperty ;
+         rdfs:domain :SSD ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#supportsSubtitles
+:supportsSubtitles rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :VideoPlayer ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#supportsVPN
+:supportsVPN rdf:type owl:DatatypeProperty ;
+             rdfs:domain :WebBrowser ;
+             rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#threadNumber
+:threadNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CPU ,
+                          :GraphicsCard ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#tracksHistory
+:tracksHistory rdf:type owl:DatatypeProperty ;
+               rdfs:domain :WebBrowser ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#usbSpeed
+:usbSpeed rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Camera ,
+                      :Keyboard ,
+                      :Microphone ,
+                      :Mouse ;
+          rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#verticalPixelNum
+:verticalPixelNum rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :screenResolution ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#videoInput
+:videoInput rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Monitor ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#videoSpeedControl
+:videoSpeedControl rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :VideoPlayer ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#videoSupportingFormat
+:videoSupportingFormat rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :VideoPlayer ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#voltage
+:voltage rdf:type owl:DatatypeProperty ;
+         rdfs:domain :PowerSupply ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#weight
+:weight rdf:type owl:DatatypeProperty ;
+        rdfs:domain :HardwareComponent ;
+        rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#width
+:width rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :dimension ;
+       rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#wirelessOption
+:wirelessOption rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ExternalComponent ;
+                rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#writeSpeed
+:writeSpeed rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :memorySpeed ;
+            rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Application
+:Application rdf:type owl:Class ;
+             rdfs:subClassOf :SoftwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#AudioComponent
+:AudioComponent rdf:type owl:Class ;
+                rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#BluetoothDriver
+:BluetoothDriver rdf:type owl:Class ;
+                 rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CPU
+:CPU rdf:type owl:Class ;
+     rdfs:subClassOf :InternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Camera
+:Camera rdf:type owl:Class ;
+        rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case
+:Case rdf:type owl:Class ;
+      rdfs:subClassOf :HardwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Component
+:Component rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Computer
+:Computer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem
+:CoolingSystem rdf:type owl:Class ;
+               rdfs:subClassOf :InternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#DockingStation
+:DockingStation rdf:type owl:Class ;
+                rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Driver
+:Driver rdf:type owl:Class ;
+        rdfs:subClassOf :SoftwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Earphones
+:Earphones rdf:type owl:Class ;
+           rdfs:subClassOf :AudioComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ExternalComponent
+:ExternalComponent rdf:type owl:Class ;
+                   rdfs:subClassOf :HardwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#GamingCPU
+:GamingCPU rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :CPU
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :threadNumber ;
+                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:onDatatype xsd:integer ;
+                                                                             owl:withRestrictions ( [ xsd:minInclusive 12
+                                                                                                    ]
+                                                                                                  )
+                                                                           ]
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :GamingComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#GamingComponent
+:GamingComponent rdf:type owl:Class ;
+                 rdfs:subClassOf :HardwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#GamingGraphicCard
+:GamingGraphicCard rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :GraphicsCard
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :memorySize ;
+                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                     owl:onDatatype xsd:integer ;
+                                                                                     owl:withRestrictions ( [ xsd:minInclusive 4
+                                                                                                            ]
+                                                                                                          )
+                                                                                   ]
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :GamingComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#GamingRAM
+:GamingRAM rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :RAM
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :memorySize ;
+                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:onDatatype xsd:integer ;
+                                                                             owl:withRestrictions ( [ xsd:minInclusive 16
+                                                                                                    ]
+                                                                                                  )
+                                                                           ]
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :GamingComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#GraphicsCard
+:GraphicsCard rdf:type owl:Class ;
+              rdfs:subClassOf :InternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDD
+:HDD rdf:type owl:Class ;
+     rdfs:subClassOf :PersistentMemory .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDDDriver
+:HDDDriver rdf:type owl:Class ;
+           rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HardwareComponent
+:HardwareComponent rdf:type owl:Class ;
+                   rdfs:subClassOf :Component .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#InternalComponent
+:InternalComponent rdf:type owl:Class ;
+                   rdfs:subClassOf :HardwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Keyboard
+:Keyboard rdf:type owl:Class ;
+          rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#KeyboardDriver
+:KeyboardDriver rdf:type owl:Class ;
+                rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#LinuxOS
+:LinuxOS rdf:type owl:Class ;
+         rdfs:subClassOf :OperatingSystem .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#MacOS
+:MacOS rdf:type owl:Class ;
+       rdfs:subClassOf :OperatingSystem .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Memory
+:Memory rdf:type owl:Class ;
+        rdfs:subClassOf :HardwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Microphone
+:Microphone rdf:type owl:Class ;
+            rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#MiningCPU
+:MiningCPU rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :CPU
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hashRate ;
+                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:onDatatype xsd:double ;
+                                                                             owl:withRestrictions ( [ xsd:minInclusive "7000.0"^^xsd:double
+                                                                                                    ]
+                                                                                                  )
+                                                                           ]
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :MiningComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#MiningComponent
+:MiningComponent rdf:type owl:Class ;
+                 rdfs:subClassOf :HardwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#MiningGraphicCard
+:MiningGraphicCard rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :GraphicsCard
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hashRate ;
+                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                     owl:onDatatype xsd:double ;
+                                                                                     owl:withRestrictions ( [ xsd:minInclusive "26.0"^^xsd:double
+                                                                                                            ]
+                                                                                                          )
+                                                                                   ]
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :memorySize ;
+                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                     owl:onDatatype xsd:integer ;
+                                                                                     owl:withRestrictions ( [ xsd:minInclusive 4
+                                                                                                            ]
+                                                                                                          )
+                                                                                   ]
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :MiningComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor
+:Monitor rdf:type owl:Class ;
+         rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Motherboard
+:Motherboard rdf:type owl:Class ;
+             rdfs:subClassOf :InternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Mouse
+:Mouse rdf:type owl:Class ;
+       rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#MouseDriver
+:MouseDriver rdf:type owl:Class ;
+             rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#NetworkDriver
+:NetworkDriver rdf:type owl:Class ;
+               rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#OperatingMemory
+:OperatingMemory rdf:type owl:Class ;
+                 rdfs:subClassOf :InternalComponent ,
+                                 :Memory .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#OperatingSystem
+:OperatingSystem rdf:type owl:Class ;
+                 rdfs:subClassOf :SoftwareComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PersistentMemory
+:PersistentMemory rdf:type owl:Class ;
+                  rdfs:subClassOf :ExternalComponent ,
+                                  :InternalComponent ,
+                                  :Memory .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply
+:PowerSupply rdf:type owl:Class ;
+             rdfs:subClassOf :InternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Printer
+:Printer rdf:type owl:Class ;
+         rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PrinterDriver
+:PrinterDriver rdf:type owl:Class ;
+               rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Projector
+:Projector rdf:type owl:Class ;
+           rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#RAM
+:RAM rdf:type owl:Class ;
+     rdfs:subClassOf :OperatingMemory .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD
+:SSD rdf:type owl:Class ;
+     rdfs:subClassOf :PersistentMemory .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSDDrIver
+:SSDDrIver rdf:type owl:Class ;
+           rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Scanner
+:Scanner rdf:type owl:Class ;
+         rdfs:subClassOf :ExternalComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ScannerDriver
+:ScannerDriver rdf:type owl:Class ;
+               rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SoftwareComponent
+:SoftwareComponent rdf:type owl:Class ;
+                   rdfs:subClassOf :Component .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SoundDriver
+:SoundDriver rdf:type owl:Class ;
+             rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Speakers
+:Speakers rdf:type owl:Class ;
+          rdfs:subClassOf :AudioComponent .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#TVCardDriver
+:TVCardDriver rdf:type owl:Class ;
+              rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoDriver
+:VideoDriver rdf:type owl:Class ;
+             rdfs:subClassOf :Driver .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame
+:VideoGame rdf:type owl:Class ;
+           rdfs:subClassOf :Application .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoPlayer
+:VideoPlayer rdf:type owl:Class ;
+             rdfs:subClassOf :Application .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#WebBrowser
+:WebBrowser rdf:type owl:Class ;
+            rdfs:subClassOf :Application .
+
+
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#WindowsOS
+:WindowsOS rdf:type owl:Class ;
+           rdfs:subClassOf :OperatingSystem .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
