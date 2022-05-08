@@ -1,0 +1,6 @@
+PREFIX base: <http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#>
+PREFIX import: <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#>
+SELECT  ?o
+WHERE{
+    base:Corsair-DDR4-16GB import:compatibleRAM ?o .
+}
