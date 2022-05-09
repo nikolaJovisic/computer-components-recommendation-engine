@@ -32,12 +32,17 @@
 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#baseClock> rdfs:range xsd:double .
 
 
+###  http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch
+<http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> rdfs:range xsd:integer .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#AGE-OF-EMPIRES
-:AGE-OF-EMPIRES rdf:type owl:NamedIndividual .
+:AGE-OF-EMPIRES rdf:type owl:NamedIndividual ,
+                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#AMD-Radeon-RX-6500-XT
@@ -47,50 +52,77 @@
                                                                                                                    :ASUS-PRIME-Z690M-PLUS ,
                                                                                                                    :ASUS-TUF-B560M-PLUS ,
                                                                                                                    :ASUS-TUF-B660-PLUS ,
-                                                                                                                   :ASUS-TUF-Z590-PLUS .
+                                                                                                                   :ASUS-TUF-Z590-PLUS ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#clockSpeed> "2.82"^^xsd:double ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coreNumber> 1024 ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#hashRate> "13.32"^^xsd:double ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 4 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#AMD-Radeon-RX-6700-XT
 :AMD-Radeon-RX-6700-XT rdf:type owl:NamedIndividual ,
                                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#GraphicsCard> ;
                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleGPU> :ASUS-PRIME-B560-PLUS ,
-                                                                                                                   :ASUS-PRIME-Z690M-PLUS .
+                                                                                                                   :ASUS-PRIME-Z690M-PLUS ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#clockSpeed> "2.581"^^xsd:double ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coreNumber> 2304 ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#hashRate> "45.5"^^xsd:double ;
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 12 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARCH-LINUX
-:ARCH-LINUX rdf:type owl:NamedIndividual .
+:ARCH-LINUX rdf:type owl:NamedIndividual ,
+                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#LinuxOS> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARCTIC-Freezer-A35
-:ARCTIC-Freezer-A35 rdf:type owl:NamedIndividual .
+:ARCTIC-Freezer-A35 rdf:type owl:NamedIndividual ,
+                             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem> ;
+                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleCooler> :ASUS-PRIME-B560-PLUS ,
+                                                                                                                   :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                                   :ASUS-TUF-B560M-PLUS ,
+                                                                                                                   :ASUS-TUF-B660-PLUS ;
+                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coolerType> "Air"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ARMAGGEDDON-VOLTRON-BRONZE-235FX
-:ARMAGGEDDON-VOLTRON-BRONZE-235FX rdf:type owl:NamedIndividual .
+:ARMAGGEDDON-VOLTRON-BRONZE-235FX rdf:type owl:NamedIndividual ,
+                                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply> ;
+                                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatiblePowerSupply> :ASUS-PRIME-B560-PLUS ,
+                                                                                                                                      :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                                                      :ASUS-TUF-B560M-PLUS ,
+                                                                                                                                      :ASUS-TUF-B660-PLUS ;
+                                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ratedPower> 242 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED
-:ASSASSINS-CREED rdf:type owl:NamedIndividual .
+:ASSASSINS-CREED rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED-BROTHERHOOD
-:ASSASSINS-CREED-BROTHERHOOD rdf:type owl:NamedIndividual .
+:ASSASSINS-CREED-BROTHERHOOD rdf:type owl:NamedIndividual ,
+                                      <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED-ORIGIN
-:ASSASSINS-CREED-ORIGIN rdf:type owl:NamedIndividual .
+:ASSASSINS-CREED-ORIGIN rdf:type owl:NamedIndividual ,
+                                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED-REVALATIONS
-:ASSASSINS-CREED-REVALATIONS rdf:type owl:NamedIndividual .
+:ASSASSINS-CREED-REVALATIONS rdf:type owl:NamedIndividual ,
+                                      <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED2
-:ASSASSINS-CREED2 rdf:type owl:NamedIndividual .
+:ASSASSINS-CREED2 rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASSASSINS-CREED3
-:ASSASSINS-CREED3 rdf:type owl:NamedIndividual .
+:ASSASSINS-CREED3 rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#ASUS-PRIME-B560-PLUS
@@ -119,70 +151,123 @@
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#BS-PLAYER
-:BS-PLAYER rdf:type owl:NamedIndividual .
+:BS-PLAYER rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoPlayer> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY-MODERN-WARFARE
-:CALL-OF-DUTY-MODERN-WARFARE rdf:type owl:NamedIndividual .
+:CALL-OF-DUTY-MODERN-WARFARE rdf:type owl:NamedIndividual ,
+                                      <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY1
-:CALL-OF-DUTY1 rdf:type owl:NamedIndividual .
+:CALL-OF-DUTY1 rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY2
-:CALL-OF-DUTY2 rdf:type owl:NamedIndividual .
+:CALL-OF-DUTY2 rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY3
-:CALL-OF-DUTY3 rdf:type owl:NamedIndividual .
+:CALL-OF-DUTY3 rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CALL-OF-DUTY4
-:CALL-OF-DUTY4 rdf:type owl:NamedIndividual .
+:CALL-OF-DUTY4 rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#VideoGame> .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CHIEFTEC-GPE-500S-500W
 :CHIEFTEC-GPE-500S-500W rdf:type owl:NamedIndividual ,
-                                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply> .
+                                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply> ;
+                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatiblePowerSupply> :ASUS-TUF-Z590-PLUS ,
+                                                                                                                            :GIGABYTE-B660 ,
+                                                                                                                            :GIGABYTE-X570S ,
+                                                                                                                            :GIGABYTE-Z690 ;
+                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ratedPower> 500 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-C1
-:COOLER-MASTER-C1 rdf:type owl:NamedIndividual .
+:COOLER-MASTER-C1 rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem> ;
+                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleCooler> :ASUS-PRIME-B560-PLUS ,
+                                                                                                                 :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                                 :ASUS-TUF-B560M-PLUS ,
+                                                                                                                 :ASUS-TUF-B660-PLUS ;
+                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coolerType> "Air"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-C2
-:COOLER-MASTER-C2 rdf:type owl:NamedIndividual .
+:COOLER-MASTER-C2 rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem> ;
+                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleCooler> :ASUS-TUF-Z590-PLUS ,
+                                                                                                                 :GIGABYTE-B660 ,
+                                                                                                                 :GIGABYTE-X570S ,
+                                                                                                                 :GIGABYTE-Z690 ;
+                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coolerType> "Liquid"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERAIR-G100M
 :COOLER-MASTER-MASTERAIR-G100M rdf:type owl:NamedIndividual ,
-                                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem> .
+                                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem> ;
+                               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleCooler> :ASUS-TUF-Z590-PLUS ,
+                                                                                                                              :GIGABYTE-B660 ,
+                                                                                                                              :GIGABYTE-X570S ,
+                                                                                                                              :GIGABYTE-Z690 ;
+                               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coolerType> "Air"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERAIR-MA610P
 :COOLER-MASTER-MASTERAIR-MA610P rdf:type owl:NamedIndividual ,
-                                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem> .
+                                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#CoolingSystem> ;
+                                <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleCooler> :ASUS-PRIME-B560-PLUS ,
+                                                                                                                               :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                                               :ASUS-TUF-B560M-PLUS ,
+                                                                                                                               :ASUS-TUF-B660-PLUS ;
+                                <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#coolerType> "Air"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERBOX-K501L
 :COOLER-MASTER-MASTERBOX-K501L rdf:type owl:NamedIndividual ,
-                                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> .
+                                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> ;
+                               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseCompatibleWithMotherboard> :ASUS-PRIME-B560-PLUS ,
+                                                                                                                                           :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                                                           :ASUS-TUF-B560M-PLUS ,
+                                                                                                                                           :ASUS-TUF-B660-PLUS ;
+                               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseType> "Mid Tower"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MASTERBOX-NR200P
 :COOLER-MASTER-MASTERBOX-NR200P rdf:type owl:NamedIndividual ,
-                                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> .
+                                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> ;
+                                <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseCompatibleWithMotherboard> :ASUS-TUF-Z590-PLUS ,
+                                                                                                                                            :GIGABYTE-B660 ,
+                                                                                                                                            :GIGABYTE-X570S ,
+                                                                                                                                            :GIGABYTE-Z690 ;
+                                <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseType> "Mini Tower"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MWE-750-BRONZE-V2
 :COOLER-MASTER-MWE-750-BRONZE-V2 rdf:type owl:NamedIndividual ,
-                                          <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply> .
+                                          <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply> ;
+                                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatiblePowerSupply> :ASUS-PRIME-B560-PLUS ,
+                                                                                                                                     :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                                                     :ASUS-TUF-B560M-PLUS ,
+                                                                                                                                     :ASUS-TUF-B660-PLUS ;
+                                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ratedPower> 750 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#COOLER-MASTER-MWE-850-GOLD-V2
 :COOLER-MASTER-MWE-850-GOLD-V2 rdf:type owl:NamedIndividual ,
-                                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply> .
+                                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#PowerSupply> ;
+                               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatiblePowerSupply> :ASUS-TUF-Z590-PLUS ,
+                                                                                                                                   :GIGABYTE-B660 ,
+                                                                                                                                   :GIGABYTE-X570S ,
+                                                                                                                                   :GIGABYTE-Z690 ;
+                               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ratedPower> 850 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CORSAIR-SSD-240GB
@@ -190,7 +275,8 @@
                             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> ;
                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :ASUS-PRIME-B560-PLUS ,
                                                                                                                :ASUS-PRIME-Z690M-PLUS ;
-                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 240 .
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 240 ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ssdType> "M.2"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CORSAIR-SSD-960GB
@@ -199,7 +285,8 @@
                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :GIGABYTE-B660 ,
                                                                                                                :GIGABYTE-X570S ,
                                                                                                                :GIGABYTE-Z690 ;
-                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 960 .
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 960 ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ssdType> "M.2"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-2TB
@@ -207,7 +294,8 @@
                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> ;
                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :ASUS-PRIME-B560-PLUS ,
                                                                                                              :ASUS-PRIME-Z690M-PLUS ;
-                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 2000 .
+                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 2000 ;
+                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ssdType> "SATA"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-P5-Plus-1TB
@@ -216,7 +304,8 @@
                          <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :GIGABYTE-B660 ,
                                                                                                                      :GIGABYTE-X570S ,
                                                                                                                      :GIGABYTE-Z690 ;
-                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 1000 .
+                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 1000 ;
+                         <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ssdType> "M.2"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-P5-Plus-500GB
@@ -225,7 +314,8 @@
                            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :GIGABYTE-B660 ,
                                                                                                                        :GIGABYTE-X570S ,
                                                                                                                        :GIGABYTE-Z690 ;
-                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 500 .
+                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 500 ;
+                           <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ssdType> "M.2"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Corsair-DDR4-16GB
@@ -234,6 +324,7 @@
                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleRAM> :ASUS-PRIME-B560-PLUS ,
                                                                                                                :ASUS-PRIME-Z690M-PLUS ,
                                                                                                                :ASUS-TUF-B560M-PLUS ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#DDRClass> 4 ;
                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 16 .
 
 
@@ -243,57 +334,128 @@
                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleRAM> :ASUS-PRIME-B560-PLUS ,
                                                                                                               :ASUS-TUF-B660-PLUS ,
                                                                                                               :ASUS-TUF-Z590-PLUS ;
+                  <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#DDRClass> 4 ;
                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 8 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Corsair-K1
 :Corsair-K1 rdf:type owl:NamedIndividual ,
-                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> .
+                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> ;
+            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseCompatibleWithMotherboard> :ASUS-PRIME-B560-PLUS ,
+                                                                                                                        :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                                        :ASUS-TUF-B560M-PLUS ,
+                                                                                                                        :ASUS-TUF-B660-PLUS ;
+            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseType> "SSF"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Corsair-K2
 :Corsair-K2 rdf:type owl:NamedIndividual ,
-                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> .
+                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Case> ;
+            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseCompatibleWithMotherboard> :ASUS-TUF-Z590-PLUS ,
+                                                                                                                        :GIGABYTE-B660 ,
+                                                                                                                        :GIGABYTE-X570S ,
+                                                                                                                        :GIGABYTE-Z690 ;
+            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#caseType> "Full Tower"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-AW2521
-:DELL-AW2521 rdf:type owl:NamedIndividual .
+:DELL-AW2521 rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-PRIME-B560-PLUS ,
+                                                                                                             :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                             :ASUS-TUF-B560M-PLUS ,
+                                                                                                             :ASUS-TUF-B660-PLUS ;
+             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 25 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-E2723HN
-:DELL-E2723HN rdf:type owl:NamedIndividual .
+:DELL-E2723HN rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-PRIME-B560-PLUS ,
+                                                                                                              :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                              :ASUS-TUF-B560M-PLUS ,
+                                                                                                              :ASUS-TUF-B660-PLUS ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 27 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-P2423
-:DELL-P2423 rdf:type owl:NamedIndividual .
+:DELL-P2423 rdf:type owl:NamedIndividual ,
+                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-TUF-Z590-PLUS ,
+                                                                                                            :GIGABYTE-B660 ,
+                                                                                                            :GIGABYTE-X570S ,
+                                                                                                            :GIGABYTE-Z690 ;
+            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 24 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-P2722H
-:DELL-P2722H rdf:type owl:NamedIndividual .
+:DELL-P2722H rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-TUF-Z590-PLUS ,
+                                                                                                             :GIGABYTE-B660 ,
+                                                                                                             :GIGABYTE-X570S ,
+                                                                                                             :GIGABYTE-Z690 ;
+             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 27 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-P3223DE
-:DELL-P3223DE rdf:type owl:NamedIndividual .
+:DELL-P3223DE rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-PRIME-B560-PLUS ,
+                                                                                                              :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                              :ASUS-TUF-B560M-PLUS ,
+                                                                                                              :ASUS-TUF-B660-PLUS ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 32 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-S2422HG
-:DELL-S2422HG rdf:type owl:NamedIndividual .
+:DELL-S2422HG rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-TUF-Z590-PLUS ,
+                                                                                                              :GIGABYTE-B660 ,
+                                                                                                              :GIGABYTE-X570S ,
+                                                                                                              :GIGABYTE-Z690 ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 24 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-S2721HGF
-:DELL-S2721HGF rdf:type owl:NamedIndividual .
+:DELL-S2721HGF rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-PRIME-B560-PLUS ,
+                                                                                                               :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                               :ASUS-TUF-B560M-PLUS ,
+                                                                                                               :ASUS-TUF-B660-PLUS ;
+               <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 27 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-S2721HS
-:DELL-S2721HS rdf:type owl:NamedIndividual .
+:DELL-S2721HS rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-TUF-Z590-PLUS ,
+                                                                                                              :GIGABYTE-B660 ,
+                                                                                                              :GIGABYTE-X570S ,
+                                                                                                              :GIGABYTE-Z690 ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 27 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-SE2422H
-:DELL-SE2422H rdf:type owl:NamedIndividual .
+:DELL-SE2422H rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-PRIME-B560-PLUS ,
+                                                                                                              :ASUS-PRIME-Z690M-PLUS ,
+                                                                                                              :ASUS-TUF-B560M-PLUS ,
+                                                                                                              :ASUS-TUF-B660-PLUS ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 24 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#DELL-U2723QE
-:DELL-U2723QE rdf:type owl:NamedIndividual .
+:DELL-U2723QE rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#Monitor> ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleMonitor> :ASUS-TUF-Z590-PLUS ,
+                                                                                                              :GIGABYTE-B660 ,
+                                                                                                              :GIGABYTE-X570S ,
+                                                                                                              :GIGABYTE-Z690 ;
+              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#diagonalInch> 27 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Dual-Radeon-RX-6500-XT
