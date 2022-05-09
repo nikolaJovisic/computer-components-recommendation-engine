@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ComponentService {
@@ -19,22 +20,69 @@ public class ComponentService {
         this.queryService = queryService;
     }
 
-    public List<String> getRAMs(String motherboard){
+    public List<String> getMotherboardCompatibleComponents(String componentName,String motherboard){
         ParameterizedSparqlString queryStr = new ParameterizedSparqlString();
         queryStr.setNsPrefix("base", Prefixes.BASE_ONTOLOGY_PREFIX);
         queryStr.setNsPrefix("import",Prefixes.IMPORT_ONTOLOGY_PREFIX);
         queryStr.append("SELECT ?s");
         queryStr.append("{");
-        queryStr.append("?s import:compatibleRAM base:");
-        queryStr.append(motherboard);
+        queryStr.append("?s import:compatible");
+        queryStr.append(componentName);
+        queryStr.append(" base:");
+        return getStrings(motherboard, queryStr);
+    }
+
+    public List<String> getComponents(String component){
+        ParameterizedSparqlString queryStr = new ParameterizedSparqlString();
+        queryStr.setNsPrefix("rdf", Prefixes.RDF);
+        queryStr.setNsPrefix("import",Prefixes.IMPORT_ONTOLOGY_PREFIX);
+        queryStr.append("SELECT ?s");
+        queryStr.append("{");
+        queryStr.append("?s rdf:type");
+        queryStr.append(" import:");
+        return getStrings(component, queryStr);
+    }
+
+    public List<String> getBetterComponents(String componentName,String dataProperty){
+        ParameterizedSparqlString queryStr = new ParameterizedSparqlString();
+        queryStr.setNsPrefix("base", Prefixes.BASE_ONTOLOGY_PREFIX);
+        queryStr.setNsPrefix("import",Prefixes.IMPORT_ONTOLOGY_PREFIX);
+        queryStr.setNsPrefix("rdf", Prefixes.RDF);
+        queryStr.append("SELECT ?s");
+        queryStr.append("{");
+        queryStr.append(" base:");
+        queryStr.append(componentName);
+        queryStr.append(" import:");
+        queryStr.append(dataProperty);
+        queryStr.append(" ?o .");
+        queryStr.append(" base:");
+        queryStr.append(componentName);
+        queryStr.append(" rdf:type ?t .");
+        queryStr.append(" ?s rdf:type ?t .");
+        queryStr.append("?s import:");
+        queryStr.append(dataProperty);
+        queryStr.append(" ?x .");
+        queryStr.append(" FILTER(?x>?o)");
+        queryStr.append("}");
+        var redundantResponse = getQueryResult(queryStr);
+        var distinctResponse = redundantResponse.stream().distinct();
+        return distinctResponse.collect(Collectors.toList());
+    }
+
+    private List<String> getStrings(String component, ParameterizedSparqlString queryStr) {
+        queryStr.append(component);
         queryStr.append(".");
         queryStr.append("}");
+        return getQueryResult(queryStr);
+    }
+
+    private ArrayList<String> getQueryResult(ParameterizedSparqlString queryStr) {
         Query q = queryStr.asQuery();
         var rawResponse =  queryService.executeQuery(q);
-        var rams = new ArrayList<String>();
+        var components = new ArrayList<String>();
         for(var rawRam : rawResponse){
-            rams.add(rawRam.split("#")[1].split(">")[0]);
+            components.add(rawRam.split("#")[1].split(">")[0]);
         }
-        return rams;
+        return components;
     }
 }

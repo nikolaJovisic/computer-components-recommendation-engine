@@ -30,9 +30,21 @@ public class ComponentsController {
         return new ResponseEntity<List<String>>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/ram")
-    public ResponseEntity<List<String>> getCompatibleRAMs(@RequestBody String motherboard){
-        var rams = componentservice.getRAMs(motherboard);
+    @GetMapping("/{componentName}")
+    public ResponseEntity<List<String>> getComponents(@PathVariable String componentName){
+        var response = componentservice.getComponents(componentName);
+        return new ResponseEntity<List<String>>(response, HttpStatus.OK);
+    }
+
+    @GetMapping("/{componentName}/{dataProperty}")
+    public ResponseEntity<List<String>> getBetterComponents(@PathVariable String componentName,@PathVariable String dataProperty){
+        var response = componentservice.getBetterComponents(componentName, dataProperty);
+        return new ResponseEntity<List<String>>(response, HttpStatus.OK);
+    }
+
+    @GetMapping("/compatible/{component}")
+    public ResponseEntity<List<String>> getCompatibleComponents(@PathVariable String component,@RequestBody String motherboard){
+        var rams = componentservice.getMotherboardCompatibleComponents(component,motherboard);
         return new ResponseEntity<>(rams, HttpStatus.OK);
     }
 }
