@@ -27,19 +27,19 @@ public class ComponentsController {
     @GetMapping()
     public ResponseEntity<List<String>> performQuery(@RequestBody String query){
         var response = queryService.executeQuery(query);
-        return new ResponseEntity<List<String>>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("/{componentName}")
     public ResponseEntity<List<String>> getComponents(@PathVariable String componentName){
         var response = componentservice.getComponents(componentName);
-        return new ResponseEntity<List<String>>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("/{componentName}/{dataProperty}")
     public ResponseEntity<List<String>> getBetterComponents(@PathVariable String componentName,@PathVariable String dataProperty){
         var response = componentservice.getBetterComponents(componentName, dataProperty);
-        return new ResponseEntity<List<String>>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("/compatible/{component}")

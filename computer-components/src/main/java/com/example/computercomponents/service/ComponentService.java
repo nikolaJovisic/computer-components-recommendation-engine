@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ComponentService {
@@ -48,6 +47,7 @@ public class ComponentService {
         queryStr.setNsPrefix("base", Prefixes.BASE_ONTOLOGY_PREFIX);
         queryStr.setNsPrefix("import",Prefixes.IMPORT_ONTOLOGY_PREFIX);
         queryStr.setNsPrefix("rdf", Prefixes.RDF);
+        queryStr.setNsPrefix("owl", Prefixes.OWL);
         queryStr.append("SELECT ?s");
         queryStr.append("{");
         queryStr.append(" base:");
@@ -62,11 +62,10 @@ public class ComponentService {
         queryStr.append("?s import:");
         queryStr.append(dataProperty);
         queryStr.append(" ?x .");
-        queryStr.append(" FILTER(?x>?o)");
+        queryStr.append(" FILTER(?x>?o && ?t!=owl:NamedIndividual)");
         queryStr.append("}");
-        var redundantResponse = getQueryResult(queryStr);
-        var distinctResponse = redundantResponse.stream().distinct();
-        return distinctResponse.collect(Collectors.toList());
+        return getQueryResult(queryStr);
+
     }
 
     private List<String> getStrings(String component, ParameterizedSparqlString queryStr) {

@@ -1,11 +1,12 @@
 PREFIX base: <http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#>
 PREFIX import: <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT ?s ?x ?t
 WHERE{
-    base:Corsair-DDR4-16GB import:memorySize ?o .
-    base:Corsair-DDR4-16GB rdf:type ?t .
+    base:Kingston-DD3-4GB import:memorySize ?o .
+    base:Kingston-DD3-4GB rdf:type ?t .
     ?s rdf:type ?t .
     ?s import:memorySize ?x .
-    FILTER(?x>=?o)
+    FILTER(?x>=?o && ?t!= owl:NamedIndividual)
 }
