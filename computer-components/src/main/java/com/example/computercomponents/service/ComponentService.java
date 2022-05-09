@@ -28,7 +28,10 @@ public class ComponentService {
         queryStr.append("?s import:compatible");
         queryStr.append(componentName);
         queryStr.append(" base:");
-        return getStrings(motherboard, queryStr);
+        queryStr.append(motherboard);
+        queryStr.append(".");
+        queryStr.append("}");
+        return getQueryResult(queryStr);
     }
 
     public List<String> getComponents(String component){
@@ -39,7 +42,10 @@ public class ComponentService {
         queryStr.append("{");
         queryStr.append("?s rdf:type");
         queryStr.append(" import:");
-        return getStrings(component, queryStr);
+        queryStr.append(component);
+        queryStr.append(".");
+        queryStr.append("}");
+        return getQueryResult(queryStr);
     }
 
     public List<String> getBetterComponents(String componentName,String dataProperty){
@@ -68,12 +74,6 @@ public class ComponentService {
 
     }
 
-    private List<String> getStrings(String component, ParameterizedSparqlString queryStr) {
-        queryStr.append(component);
-        queryStr.append(".");
-        queryStr.append("}");
-        return getQueryResult(queryStr);
-    }
 
     private ArrayList<String> getQueryResult(ParameterizedSparqlString queryStr) {
         Query q = queryStr.asQuery();
