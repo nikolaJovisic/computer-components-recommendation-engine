@@ -36,6 +36,13 @@ public class ComponentsController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    @GetMapping("/motherboards/{componentType}")
+    public ResponseEntity<List<String>> getCompatibleMotherboards(@RequestBody String componentName,@PathVariable String componentType){
+        var response = componentservice.getCompatibleMotherboards(componentName, componentType);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+
     @GetMapping("/{componentName}/{dataProperty}")
     public ResponseEntity<List<String>> getBetterComponents(@PathVariable String componentName,@PathVariable String dataProperty){
         var response = componentservice.getBetterComponents(componentName, dataProperty);
