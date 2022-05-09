@@ -361,8 +361,7 @@ _:genid2 a rdf:List ;
 
 :diagonalInch a owl:DatatypeProperty ;
 	rdfs:subPropertyOf owl:topDataProperty ;
-	rdfs:domain :Monitor ;
-	rdfs:range xsd:double .
+	rdfs:domain :Monitor .
 # 
 # http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#dimension
 
@@ -479,6 +478,12 @@ _:genid2 a rdf:List ;
 
 :ramSlotNumber a owl:DatatypeProperty ;
 	rdfs:domain :RAM ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#ratedPower
+
+:ratedPower a owl:DatatypeProperty ;
+	rdfs:domain :PowerSupply ;
 	rdfs:range xsd:integer .
 # 
 # http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#readSpeed
@@ -614,12 +619,6 @@ _:genid2 a rdf:List ;
 :videoSupportingFormat a owl:DatatypeProperty ;
 	rdfs:domain :VideoPlayer ;
 	rdfs:range xsd:string .
-# 
-# http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#voltage
-
-:voltage a owl:DatatypeProperty ;
-	rdfs:domain :PowerSupply ;
-	rdfs:range xsd:integer .
 # 
 # http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#weight
 

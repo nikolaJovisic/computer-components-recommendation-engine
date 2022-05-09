@@ -34,6 +34,21 @@ public class ComponentService {
         return getQueryResult(queryStr);
     }
 
+    public List<String> getCompatibleMotherboards(String componentName, String componentType){
+        ParameterizedSparqlString queryStr = new ParameterizedSparqlString();
+        queryStr.setNsPrefix("base", Prefixes.BASE_ONTOLOGY_PREFIX);
+        queryStr.setNsPrefix("import",Prefixes.IMPORT_ONTOLOGY_PREFIX);
+        queryStr.append("SELECT ?s");
+        queryStr.append("{");
+        queryStr.append("base:");
+        queryStr.append(componentName);
+        queryStr.append(" import:compatible");
+        queryStr.append(componentType);
+        queryStr.append(" ?s .");
+        queryStr.append("}");
+        return getQueryResult(queryStr);
+    }
+
     public List<String> getComponents(String component){
         ParameterizedSparqlString queryStr = new ParameterizedSparqlString();
         queryStr.setNsPrefix("rdf", Prefixes.RDF);
@@ -41,7 +56,7 @@ public class ComponentService {
         queryStr.append("SELECT ?s");
         queryStr.append("{");
         queryStr.append("?s rdf:type");
-        queryStr.append(" import:");
+        queryStr.append("import:");
         queryStr.append(component);
         queryStr.append(".");
         queryStr.append("}");
