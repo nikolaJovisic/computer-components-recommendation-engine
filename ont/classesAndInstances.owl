@@ -178,17 +178,27 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CORSAIR-SSD-240GB
 :CORSAIR-SSD-240GB rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> .
+                            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :ASUS-PRIME-B560-PLUS ,
+                                                                                                               :ASUS-PRIME-Z690M-PLUS ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 240 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CORSAIR-SSD-960GB
 :CORSAIR-SSD-960GB rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> .
+                            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :GIGABYTE-B660 ,
+                                                                                                               :GIGABYTE-X570S ,
+                                                                                                               :GIGABYTE-Z690 ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 960 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-2TB
 :CRUCIAL-SSD-2TB rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> .
+                          <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#SSD> ;
+                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleSSD> :ASUS-PRIME-B560-PLUS ,
+                                                                                                             :ASUS-PRIME-Z690M-PLUS ;
+                 <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 2000 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#CRUCIAL-SSD-P5-Plus-1TB
@@ -801,17 +811,28 @@
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Serial-ATA-1000GB
 :Serial-ATA-1000GB rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDD> .
+                            <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDD> ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleHDD> :ASUS-PRIME-B560-PLUS ,
+                                                                                                               :ASUS-PRIME-Z690M-PLUS ;
+                   <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 1000 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Serial-ATA-3-1000GB
 :Serial-ATA-3-1000GB rdf:type owl:NamedIndividual ,
-                              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDD> .
+                              <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDD> ;
+                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleHDD> :ASUS-TUF-B560M-PLUS ,
+                                                                                                                 :ASUS-TUF-B660-PLUS ,
+                                                                                                                 :ASUS-TUF-Z590-PLUS ;
+                     <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 1000 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Serial-ATA-3-500GB
 :Serial-ATA-3-500GB rdf:type owl:NamedIndividual ,
-                             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDD> .
+                             <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#HDD> ;
+                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#compatibleHDD> :GIGABYTE-B660 ,
+                                                                                                                :GIGABYTE-X570S ,
+                                                                                                                :GIGABYTE-Z690 ;
+                    <http://www.semanticweb.org/paracelsus/ontologies/2022/4/untitled-ontology-3#memorySize> 500 .
 
 
 ###  http://www.semanticweb.org/pc/ontologies/2022/4/untitled-ontology-17#Serial-ATA-500GB
