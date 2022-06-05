@@ -1,0 +1,524 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node computer_wont_start
+{
+     label = "C1";
+     position = (0 902);
+     states = ("State 0");
+}
+
+node blank_screen
+{
+     label = "C2";
+     position = (138 907);
+     states = ("State 0");
+}
+
+node blue_screen
+{
+     label = "C3";
+     position = (262 903);
+     states = ("State 0");
+}
+
+node not_booting
+{
+     label = "C4";
+     position = (412 912);
+     states = ("State 0");
+}
+
+node frozen_screen
+{
+     label = "C5";
+     position = (562 905);
+     states = ("State 0");
+}
+
+node slow
+{
+     label = "C6";
+     position = (921 950);
+     states = ("State 0");
+}
+
+node strange_noise
+{
+     label = "C7";
+     position = (1034 931);
+     states = ("State 0");
+}
+
+node overheating
+{
+     label = "C8";
+     position = (1139 940);
+     states = ("State 0");
+}
+
+node no_internet_connection
+{
+     label = "C9";
+     position = (779 900);
+     states = ("State 0");
+}
+
+node cables_connection
+{
+     label = "C10";
+     position = (12 390);
+     states = ("State 0");
+}
+
+node driver_malfunction
+{
+     label = "C11";
+     position = (170 395);
+     states = ("State 0");
+}
+
+node storage_disconnected
+{
+     label = "C12";
+     position = (11 457);
+     states = ("State 0");
+}
+
+node ram_disconnected
+{
+     label = "C13";
+     position = (179 457);
+     states = ("State 0");
+}
+
+node virus
+{
+     label = "C14";
+     position = (313 397);
+     states = ("State 0");
+}
+
+node insufficient_ram
+{
+     label = "C15";
+     position = (322 473);
+     states = ("State 0");
+}
+
+node corrupt_files
+{
+     label = "C16";
+     position = (425 387);
+     states = ("State 0");
+}
+
+node missing_files
+{
+     label = "C17";
+     position = (480 455);
+     states = ("State 0");
+}
+
+node fans_malfunction
+{
+     label = "C18";
+     position = (601 396);
+     states = ("State 0");
+}
+
+node insufficient_cooling
+{
+     label = "C19";
+     position = (606 472);
+     states = ("State 0");
+}
+
+node gpu_disconnected
+{
+     label = "C20";
+     position = (317 547);
+     states = ("State 0");
+}
+
+node gpu_overused
+{
+     label = "C21";
+     position = (428 565);
+     states = ("State 0");
+}
+
+node insufficient_power_source
+{
+     label = "C22";
+     position = (54 606);
+     states = ("State 0");
+}
+
+node os_glitch
+{
+     label = "C23";
+     position = (64 274);
+     states = ("State 0");
+}
+
+node software_glitch
+{
+     label = "C24";
+     position = (162 281);
+     states = ("State 0");
+}
+
+node bios_glitch
+{
+     label = "C25";
+     position = (0 70);
+     states = ("yes" "no");
+}
+
+node storage_corruption
+{
+     label = "C26";
+     position = (282 210);
+     states = ("State 0");
+}
+
+node os_outdated
+{
+     label = "C27";
+     position = (324 14);
+     states = ("yes" "no");
+}
+
+node bios_battery
+{
+     label = "C28";
+     position = (0 12);
+     states = ("yes" "no");
+}
+
+node router_glitch
+{
+     label = "C30";
+     position = (154 63);
+     states = ("yes" "no");
+}
+
+node provider_glitch
+{
+     label = "C31";
+     position = (159 6);
+     states = ("yes" "no");
+}
+
+node insufficient_anti_virus
+{
+     label = "C32";
+     position = (520 80);
+     states = ("State 0");
+}
+
+node storage_overstuffed
+{
+     label = "C33";
+     position = (587 241);
+     states = ("State 0");
+}
+
+node speakers_malfunction
+{
+     label = "C34";
+     position = (328 78);
+     states = ("yes" "no");
+}
+
+node fans_blocked
+{
+     label = "C35";
+     position = (519 13);
+     states = ("yes");
+}
+
+node cpu_overused
+{
+     label = "C36";
+     position = (813 201);
+     states = ("State 0");
+}
+
+node slow_internet
+{
+     label = "C38";
+     position = (55 835);
+     states = ("State 0");
+}
+
+node keyboard_not_working
+{
+     label = "C39";
+     position = (161 830);
+     states = ("State 0");
+}
+
+node self_restart
+{
+     label = "C40";
+     position = (349 811);
+     states = ("State 0");
+}
+
+node mouse_not_working
+{
+     label = "C41";
+     position = (490 817);
+     states = ("State 0");
+}
+
+node printer_not_working
+{
+     label = "C42";
+     position = (704 814);
+     states = ("State 0");
+}
+
+node speakers_not_working
+{
+     label = "C43";
+     position = (891 746);
+     states = ("State 0");
+}
+
+node microphone_not_wokring
+{
+     label = "C44";
+     position = (886 805);
+     states = ("State 0");
+}
+
+node app_not_responding
+{
+     label = "C45";
+     position = (657 695);
+     states = ("State 0");
+}
+
+potential (computer_wont_start)
+{
+ data = ( 1.0 );
+}
+
+potential (blank_screen)
+{
+ data = ( 1.0 );
+}
+
+potential (blue_screen)
+{
+ data = ( 1.0 );
+}
+
+potential (not_booting)
+{
+ data = ( 1.0 );
+}
+
+potential (frozen_screen)
+{
+ data = ( 1.0 );
+}
+
+potential (slow)
+{
+ data = ( 1.0 );
+}
+
+potential (strange_noise)
+{
+ data = ( 1.0 );
+}
+
+potential (overheating)
+{
+ data = ( 1.0 );
+}
+
+potential (no_internet_connection)
+{
+ data = ( 1.0 );
+}
+
+potential (cables_connection)
+{
+ data = ( 1.0 );
+}
+
+potential (driver_malfunction)
+{
+ data = ( 1.0 );
+}
+
+potential (storage_disconnected)
+{
+ data = ( 1.0 );
+}
+
+potential (ram_disconnected)
+{
+ data = ( 1.0 );
+}
+
+potential (virus)
+{
+ data = ( 1.0 );
+}
+
+potential (insufficient_ram)
+{
+ data = ( 1.0 );
+}
+
+potential (corrupt_files)
+{
+ data = ( 1.0 );
+}
+
+potential (missing_files)
+{
+ data = ( 1.0 );
+}
+
+potential (fans_malfunction)
+{
+ data = ( 1.0 );
+}
+
+potential (insufficient_cooling)
+{
+ data = ( 1.0 );
+}
+
+potential (gpu_disconnected)
+{
+ data = ( 1.0 );
+}
+
+potential (gpu_overused)
+{
+ data = ( 1.0 );
+}
+
+potential (insufficient_power_source)
+{
+ data = ( 1.0 );
+}
+
+potential (os_glitch)
+{
+ data = ( 1.0 );
+}
+
+potential (software_glitch)
+{
+ data = ( 1.0 );
+}
+
+potential (bios_glitch)
+{
+ data = ( 0.85 0.15 );
+}
+
+potential (storage_corruption)
+{
+ data = ( 1.0 );
+}
+
+potential (os_outdated)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (bios_battery)
+{
+ data = ( 0.05 0.95 );
+}
+
+potential (router_glitch)
+{
+ data = ( 0.45 0.55 );
+}
+
+potential (provider_glitch)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (insufficient_anti_virus)
+{
+ data = ( 1.0 );
+}
+
+potential (storage_overstuffed)
+{
+ data = ( 1.0 );
+}
+
+potential (speakers_malfunction)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (fans_blocked)
+{
+ data = ( 1.0 );
+}
+
+potential (cpu_overused)
+{
+ data = ( 1.0 );
+}
+
+potential (slow_internet)
+{
+ data = ( 1.0 );
+}
+
+potential (keyboard_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (self_restart)
+{
+ data = ( 1.0 );
+}
+
+potential (mouse_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (printer_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (speakers_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (microphone_not_wokring)
+{
+ data = ( 1.0 );
+}
+
+potential (app_not_responding)
+{
+ data = ( 1.0 );
+}
+
