@@ -1,0 +1,83 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node slow_internet
+{
+     label = "C4";
+     position = (558 166);
+     states = ("yes" "no");
+}
+
+node virus
+{
+     label = "C5";
+     position = (316 134);
+     states = ("yes" "no");
+}
+
+node cables_connection
+{
+     label = "C6";
+     position = (548 23);
+     states = ("yes" "no");
+}
+
+node provider_glitch
+{
+     label = "C9";
+     position = (804 150);
+     states = ("yes" "no");
+}
+
+node router_glitch
+{
+     label = "C10";
+     position = (556 304);
+     states = ("yes" "no");
+}
+
+potential (slow_internet | router_glitch provider_glitch cables_connection virus)
+{
+ data = ((((( 0.95 0.05 )
+( 0.8 0.2 ))
+(( 0.85 0.15 )
+( 0.6 0.4 )))
+((( 0.7 0.3 )
+( 0.55 0.45 ))
+(( 0.5 0.5 )
+( 0.45 0.55 ))))
+(((( 0.45 0.55 )
+( 0.37 0.63 ))
+(( 0.35 0.65 )
+( 0.24 0.76 )))
+((( 0.22 0.78 )
+( 0.19 0.81 ))
+(( 0.2 0.8 )
+( 0.1 0.0 )))));
+}
+
+potential (virus)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (cables_connection)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (provider_glitch)
+{
+ data = ( 0.05 0.95 );
+}
+
+potential (router_glitch)
+{
+ data = ( 0.45 0.55 );
+}
+
