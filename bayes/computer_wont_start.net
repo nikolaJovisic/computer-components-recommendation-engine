@@ -2,6 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C6,C7,C8,C9,C13)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -63,12 +64,12 @@ potential (computer_wont_start | driver_malfunction ram_disconnected insufficien
 
 potential (cables_connection)
 {
- data = ( 0.5 0.5 );
+ data = ( 0.1 0.9 );
 }
 
 potential (driver_malfunction)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.4 0.6 );
 }
 
 potential (ram_disconnected)

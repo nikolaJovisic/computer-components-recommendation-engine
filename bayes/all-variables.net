@@ -2,6 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C30,C31,C32,C33,C34,C35,C36,C38,C39,C40,C41,C42,C43,C44,C45)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -9,7 +10,7 @@ net
 node computer_wont_start
 {
      label = "C1";
-     position = (0 902);
+     position = (80 902);
      states = ("State 0");
 }
 
@@ -73,14 +74,14 @@ node cables_connection
 {
      label = "C10";
      position = (12 390);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node driver_malfunction
 {
      label = "C11";
      position = (170 395);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node storage_disconnected
@@ -94,14 +95,14 @@ node ram_disconnected
 {
      label = "C13";
      position = (179 457);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node virus
 {
      label = "C14";
      position = (313 397);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node insufficient_ram
@@ -115,21 +116,21 @@ node corrupt_files
 {
      label = "C16";
      position = (425 387);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node missing_files
 {
      label = "C17";
      position = (480 455);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node fans_malfunction
 {
      label = "C18";
      position = (601 396);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node insufficient_cooling
@@ -143,41 +144,41 @@ node gpu_disconnected
 {
      label = "C20";
      position = (317 547);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node gpu_overused
 {
      label = "C21";
      position = (428 565);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node insufficient_power_source
 {
      label = "C22";
-     position = (54 606);
-     states = ("State 0");
+     position = (50 622);
+     states = ("yes" "no");
 }
 
 node os_glitch
 {
      label = "C23";
      position = (64 274);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node software_glitch
 {
      label = "C24";
      position = (162 281);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node bios_glitch
 {
      label = "C25";
-     position = (0 70);
+     position = (80 70);
      states = ("yes" "no");
 }
 
@@ -198,7 +199,7 @@ node os_outdated
 node bios_battery
 {
      label = "C28";
-     position = (0 12);
+     position = (80 12);
      states = ("yes" "no");
 }
 
@@ -220,14 +221,14 @@ node insufficient_anti_virus
 {
      label = "C32";
      position = (520 80);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node storage_overstuffed
 {
      label = "C33";
      position = (587 241);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node speakers_malfunction
@@ -248,7 +249,7 @@ node cpu_overused
 {
      label = "C36";
      position = (813 201);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node slow_internet
@@ -354,12 +355,12 @@ potential (no_internet_connection)
 
 potential (cables_connection)
 {
- data = ( 1.0 );
+ data = ( 0.1 0.9 );
 }
 
 potential (driver_malfunction)
 {
- data = ( 1.0 );
+ data = ( 0.4 0.6 );
 }
 
 potential (storage_disconnected)
@@ -369,12 +370,12 @@ potential (storage_disconnected)
 
 potential (ram_disconnected)
 {
- data = ( 1.0 );
+ data = ( 0.1 0.9 );
 }
 
 potential (virus)
 {
- data = ( 1.0 );
+ data = ( 0.2 0.8 );
 }
 
 potential (insufficient_ram)
@@ -384,17 +385,17 @@ potential (insufficient_ram)
 
 potential (corrupt_files)
 {
- data = ( 1.0 );
+ data = ( 0.5 0.5 );
 }
 
 potential (missing_files)
 {
- data = ( 1.0 );
+ data = ( 0.05 0.95 );
 }
 
 potential (fans_malfunction)
 {
- data = ( 1.0 );
+ data = ( 0.15 0.85 );
 }
 
 potential (insufficient_cooling)
@@ -404,27 +405,27 @@ potential (insufficient_cooling)
 
 potential (gpu_disconnected)
 {
- data = ( 1.0 );
+ data = ( 0.05 0.95 );
 }
 
 potential (gpu_overused)
 {
- data = ( 1.0 );
+ data = ( 0.6 0.4 );
 }
 
 potential (insufficient_power_source)
 {
- data = ( 1.0 );
+ data = ( 0.02 0.98 );
 }
 
 potential (os_glitch)
 {
- data = ( 1.0 );
+ data = ( 0.1 0.9 );
 }
 
 potential (software_glitch)
 {
- data = ( 1.0 );
+ data = ( 0.3 0.7 );
 }
 
 potential (bios_glitch)
@@ -454,17 +455,17 @@ potential (router_glitch)
 
 potential (provider_glitch)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.05 0.95 );
 }
 
 potential (insufficient_anti_virus)
 {
- data = ( 1.0 );
+ data = ( 0.2 0.8 );
 }
 
 potential (storage_overstuffed)
 {
- data = ( 1.0 );
+ data = ( 0.1 0.9 );
 }
 
 potential (speakers_malfunction)
@@ -479,7 +480,7 @@ potential (fans_blocked)
 
 potential (cpu_overused)
 {
- data = ( 1.0 );
+ data = ( 0.5 0.5 );
 }
 
 potential (slow_internet)
