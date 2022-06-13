@@ -2,20 +2,18 @@ package com.example.computercomponents.service;
 
 import com.example.computercomponents.constants.Prefixes;
 import org.apache.jena.query.ParameterizedSparqlString;
-import org.apache.jena.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ComponentService {
 
-    private final QueryService queryService;
+    private final OntologyQueryService queryService;
 
     @Autowired
-    public ComponentService(QueryService queryService) {
+    public ComponentService(OntologyQueryService queryService) {
         this.queryService = queryService;
     }
 
@@ -31,7 +29,7 @@ public class ComponentService {
         queryStr.append(motherboard);
         queryStr.append(".");
         queryStr.append("}");
-        return getQueryResult(queryStr);
+        return queryService.getQueryResult(queryStr);
     }
 
     public List<String> getCompatibleMotherboards(String componentName, String componentType){
@@ -46,7 +44,7 @@ public class ComponentService {
         queryStr.append(componentType);
         queryStr.append(" ?s .");
         queryStr.append("}");
-        return getQueryResult(queryStr);
+        return queryService.getQueryResult(queryStr);
     }
 
     public List<String> getComponents(String component){
@@ -56,11 +54,11 @@ public class ComponentService {
         queryStr.append("SELECT ?s");
         queryStr.append("{");
         queryStr.append("?s rdf:type");
-        queryStr.append("import:");
+        queryStr.append(" import:");
         queryStr.append(component);
         queryStr.append(".");
         queryStr.append("}");
-        return getQueryResult(queryStr);
+        return queryService.getQueryResult(queryStr);
     }
 
     public List<String> getBetterComponents(String componentName,String dataProperty){
@@ -85,18 +83,22 @@ public class ComponentService {
         queryStr.append(" ?x .");
         queryStr.append(" FILTER(?x>?o && ?t!=owl:NamedIndividual)");
         queryStr.append("}");
-        return getQueryResult(queryStr);
+        return queryService.getQueryResult(queryStr);
 
     }
 
-
-    private ArrayList<String> getQueryResult(ParameterizedSparqlString queryStr) {
-        Query q = queryStr.asQuery();
-        var rawResponse =  queryService.executeQuery(q);
-        var components = new ArrayList<String>();
-        for(var rawRam : rawResponse){
-            components.add(rawRam.split("#")[1].split(">")[0]);
-        }
-        return components;
+    public List<String> getComponentProperty(String componentName,String propertyName){
+        ParameterizedSparqlString queryStr = new ParameterizedSparqlString();
+        queryStr.setNsPrefix("base", Prefixes.BASE_ONTOLOGY_PREFIX);
+        queryStr.setNsPrefix("import",Prefixes.IMPORT_ONTOLOGY_PREFIX);
+        queryStr.append("SELECT ?o");
+        queryStr.append("{");
+        queryStr.append(" base:");
+        queryStr.append(componentName);
+        queryStr.append(" import:");
+        queryStr.append(propertyName);
+        queryStr.append(" ?o.");
+        queryStr.append("}");
+        return queryService.getQueryResult(queryStr);
     }
 }
