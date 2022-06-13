@@ -2,33 +2,23 @@ package com.example.computercomponents.service;
 
 import com.example.computercomponents.constants.URL;
 import com.fasterxml.jackson.core.type.TypeReference;
-
 import org.apache.jena.query.*;
-
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.riot.Lang;
+import org.apache.jena.riot.RDFDataMgr;
+import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.RDFNode;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.rdf.model.Statement;
-import org.apache.jena.rdf.model.StmtIterator;
-import org.apache.jena.riot.Lang;
-import org.apache.jena.riot.RDFDataMgr;
-import org.springframework.stereotype.Service;
-
-
 @Service
-public  class QueryService {
+public  class OntologyQueryService {
 
     protected Model model;
 
-    public QueryService() {
+    public OntologyQueryService() {
         model = ModelFactory.createDefaultModel();
         try{
             InputStream is = TypeReference.class.getResourceAsStream(URL.CLASSES_AND_INSTANCES_PATH);
@@ -54,6 +44,37 @@ public  class QueryService {
         QueryExecution exec = QueryExecutionFactory.create(query,model);
         return PrintQuery(exec.execSelect());
     }
+
+    public ArrayList<String> getQueryResult(ParameterizedSparqlString queryStr) {
+        Query q = queryStr.asQuery();
+
+        var rawResponse =  executeQuery(q);
+        var components = new ArrayList<String>();
+        for(var rawRam : rawResponse)
+            components.add(rawRam.split("#")[1].split(">")[0]);
+
+
+
+        return components;
+    }
+
+     public ArrayList<String> getQueryPropertiesResult(ParameterizedSparqlString queryStr) {
+         Query q = queryStr.asQuery();
+
+         var rawResponse =  executeQuery(q);
+         var components = new ArrayList<String>();
+         for(var rawRam : rawResponse){
+             if(rawRam.contains("double"))
+                 components.add(rawRam.split("\"")[1].split("\"")[0]);
+             else
+                components.add(rawRam.split("=")[1].split(" ")[1]);
+         }
+         return components;
+
+     }
+
+
+
 
     public List<String> PrintQuery(ResultSet resultSet){
         System.out.println("################ QUERY RESULT #######################");

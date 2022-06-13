@@ -1,7 +1,7 @@
 package com.example.computercomponents.controller;
 
 import com.example.computercomponents.service.ComponentService;
-import com.example.computercomponents.service.QueryService;
+import com.example.computercomponents.service.OntologyQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +15,10 @@ public class ComponentsController {
 
 
     private final ComponentService componentservice;
-    private final QueryService queryService;
+    private final OntologyQueryService queryService;
 
     @Autowired
-    public ComponentsController(ComponentService componentservice, QueryService queryService) {
+    public ComponentsController(ComponentService componentservice, OntologyQueryService queryService) {
         this.componentservice = componentservice;
         this.queryService = queryService;
     }
@@ -36,22 +36,5 @@ public class ComponentsController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/motherboards/{componentType}")
-    public ResponseEntity<List<String>> getCompatibleMotherboards(@RequestBody String componentName,@PathVariable String componentType){
-        var response = componentservice.getCompatibleMotherboards(componentName, componentType);
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
 
-
-    @GetMapping("/{componentName}/{dataProperty}")
-    public ResponseEntity<List<String>> getBetterComponents(@PathVariable String componentName,@PathVariable String dataProperty){
-        var response = componentservice.getBetterComponents(componentName, dataProperty);
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
-
-    @GetMapping("/compatible/{component}")
-    public ResponseEntity<List<String>> getCompatibleComponents(@PathVariable String component,@RequestBody String motherboard){
-        var rams = componentservice.getMotherboardCompatibleComponents(component,motherboard);
-        return new ResponseEntity<>(rams, HttpStatus.OK);
-    }
 }
