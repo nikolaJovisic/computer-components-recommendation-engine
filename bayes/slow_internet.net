@@ -16,50 +16,50 @@ node slow_internet
 
 node virus
 {
-     label = "C5";
-     position = (272 156);
+     label = "C1";
+     position = (265 139);
      states = ("yes" "no");
 }
 
 node cables_connection
 {
-     label = "C6";
-     position = (548 23);
-     states = ("yes" "no");
-}
-
-node provider_glitch
-{
-     label = "C9";
-     position = (896 160);
+     label = "C2";
+     position = (557 0);
      states = ("yes" "no");
 }
 
 node router_glitch
 {
-     label = "C10";
-     position = (556 304);
+     label = "C3";
+     position = (560 290);
      states = ("yes" "no");
 }
 
-potential (slow_internet | router_glitch provider_glitch cables_connection virus)
+node provider_glitch
 {
- data = ((((( 0.95 0.05 )
-( 0.8 0.2 ))
-(( 0.85 0.15 )
-( 0.6 0.4 )))
-((( 0.7 0.3 )
-( 0.55 0.45 ))
-(( 0.5 0.5 )
-( 0.45 0.55 ))))
-(((( 0.45 0.55 )
-( 0.37 0.63 ))
-(( 0.35 0.65 )
-( 0.24 0.76 )))
-((( 0.22 0.78 )
-( 0.19 0.81 ))
-(( 0.2 0.8 )
-( 0.1 0.9 )))));
+     label = "C4";
+     position = (879 148);
+     states = ("yes" "no");
+}
+
+potential (slow_internet | provider_glitch router_glitch cables_connection virus)
+{
+ data = ((((( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 ))
+(( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 )))
+((( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 ))
+(( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 ))))
+(((( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 ))
+(( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 )))
+((( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 ))
+(( 0.47000003 0.53000003 )
+( 0.47000003 0.53000003 )))));
 }
 
 potential (virus)
@@ -69,16 +69,16 @@ potential (virus)
 
 potential (cables_connection)
 {
- data = ( 0.1 0.9 );
-}
-
-potential (provider_glitch)
-{
- data = ( 0.05 0.95 );
+ data = ( 0.3 0.7 );
 }
 
 potential (router_glitch)
 {
  data = ( 0.45 0.55 );
+}
+
+potential (provider_glitch)
+{
+ data = ( 0.05 0.95 );
 }
 

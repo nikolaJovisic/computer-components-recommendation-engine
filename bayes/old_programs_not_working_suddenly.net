@@ -1,0 +1,63 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node old_programs_not_working_suddenly
+{
+     label = "C2";
+     position = (500 146);
+     states = ("State 0");
+}
+
+node corrupt_files
+{
+     label = "C3";
+     position = (339 252);
+     states = ("yes" "no");
+}
+
+node os_outdated
+{
+     label = "C4";
+     position = (702 255);
+     states = ("yes" "no");
+}
+
+node missing_files
+{
+     label = "C5";
+     position = (494 43);
+     states = ("yes" "no");
+}
+
+potential (old_programs_not_working_suddenly | os_outdated missing_files corrupt_files)
+{
+ data = (((( 1.0 )
+( 1.0 ))
+(( 1.0 )
+( 1.0 )))
+((( 1.0 )
+( 1.0 ))
+(( 1.0 )
+( 1.0 ))));
+}
+
+potential (corrupt_files)
+{
+ data = ( 0.15 0.85 );
+}
+
+potential (os_outdated)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (missing_files)
+{
+ data = ( 0.05 0.95 );
+}
+

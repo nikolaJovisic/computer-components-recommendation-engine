@@ -2,6 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C2,C3,C5,C6,C8)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -15,60 +16,55 @@ node self_restart
 
 node bios_glitch
 {
-     label = "C3";
-     position = (269 156);
-     states = ("yes" "no");
-}
-
-node fans_malfunction
-{
-     label = "C5";
-     position = (677 148);
+     label = "C1";
+     position = (254 160);
      states = ("yes" "no");
 }
 
 node os_glitch
 {
-     label = "C6";
-     position = (507 17);
+     label = "C2";
+     position = (502 13);
+     states = ("yes" "no");
+}
+
+node fans_malfunction
+{
+     label = "C3";
+     position = (711 168);
      states = ("yes" "no");
 }
 
 node gpu_overused
 {
-     label = "C8";
-     position = (518 256);
+     label = "C4";
+     position = (521 292);
      states = ("yes" "no");
 }
 
-potential (self_restart | gpu_overused os_glitch fans_malfunction bios_glitch)
+potential (self_restart | gpu_overused fans_malfunction os_glitch bios_glitch)
 {
- data = ((((( 0.99 0.01 )
-( 0.82 0.18 ))
-(( 0.77 0.23 )
-( 0.65 0.35 )))
-((( 0.6 0.4 )
-( 0.55 0.45 ))
-(( 0.5 0.5 )
-( 0.44 0.56 ))))
-(((( 0.35 0.65 )
-( 0.27 0.73 ))
-(( 0.3 0.7 )
-( 0.25 0.75 )))
-((( 0.2 0.8 )
-( 0.16 0.84 ))
-(( 0.11 0.89 )
-( 0.04 0.96 )))));
+ data = ((((( 0.4375 0.5625 )
+( 0.4375 0.5625 ))
+(( 0.4375 0.5625 )
+( 0.4375 0.5625 )))
+((( 0.4375 0.5625 )
+( 0.4375 0.5625 ))
+(( 0.4375 0.5625 )
+( 0.4375 0.5625 ))))
+(((( 0.4375 0.5625 )
+( 0.4375 0.5625 ))
+(( 0.4375 0.5625 )
+( 0.4375 0.5625 )))
+((( 0.4375 0.5625 )
+( 0.4375 0.5625 ))
+(( 0.4375 0.5625 )
+( 0.4375 0.5625 )))));
 }
 
 potential (bios_glitch)
 {
- data = ( 0.85 0.15 );
-}
-
-potential (fans_malfunction)
-{
- data = ( 0.15 0.85 );
+ data = ( 0.1 0.9 );
 }
 
 potential (os_glitch)
@@ -76,8 +72,13 @@ potential (os_glitch)
  data = ( 0.1 0.9 );
 }
 
+potential (fans_malfunction)
+{
+ data = ( 0.01 0.99 );
+}
+
 potential (gpu_overused)
 {
- data = ( 0.6 0.4 );
+ data = ( 0.1 0.9 );
 }
 

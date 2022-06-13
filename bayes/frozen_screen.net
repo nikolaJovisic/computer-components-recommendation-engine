@@ -2,6 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C2,C3,C5,C6,C7)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -13,62 +14,62 @@ node frozen_screen
      states = ("yes" "no");
 }
 
-node cpu_overused
+node gpu_overused
 {
-     label = "C3";
-     position = (281 145);
+     label = "C1";
+     position = (239 147);
      states = ("yes" "no");
 }
 
 node storage_overstuffed
 {
-     label = "C5";
-     position = (521 6);
+     label = "C3";
+     position = (510 0);
      states = ("yes" "no");
 }
 
 node software_glitch
 {
-     label = "C6";
-     position = (726 159);
+     label = "C4";
+     position = (729 154);
      states = ("yes" "no");
 }
 
 node driver_malfunction
 {
-     label = "C7";
-     position = (524 249);
+     label = "C5";
+     position = (525 278);
      states = ("yes" "no");
 }
 
-potential (frozen_screen | driver_malfunction software_glitch storage_overstuffed cpu_overused)
+potential (frozen_screen | driver_malfunction software_glitch storage_overstuffed gpu_overused)
 {
- data = ((((( 0.89 0.11 )
-( 0.82 0.18 ))
-(( 0.79 0.21 )
-( 0.75 0.25 )))
-((( 0.77 0.23 )
-( 0.68 0.32 ))
-(( 0.65 0.35 )
-( 0.6 0.4 ))))
-(((( 0.57 0.43 )
-( 0.55 0.45 ))
-(( 0.45 0.55 )
-( 0.42 0.58 )))
-((( 0.35 0.65 )
-( 0.33 0.67 ))
-(( 0.24 0.76 )
-( 0.11 0.89 )))));
+ data = ((((( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 ))
+(( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 )))
+((( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 ))
+(( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 ))))
+(((( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 ))
+(( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 )))
+((( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 ))
+(( 0.56062496 0.43937498 )
+( 0.56062496 0.43937498 )))));
 }
 
-potential (cpu_overused)
+potential (gpu_overused)
 {
- data = ( 0.5 0.5 );
+ data = ( 0.1 0.9 );
 }
 
 potential (storage_overstuffed)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.25 0.75 );
 }
 
 potential (software_glitch)
@@ -78,6 +79,6 @@ potential (software_glitch)
 
 potential (driver_malfunction)
 {
- data = ( 0.4 0.6 );
+ data = ( 0.2 0.8 );
 }
 

@@ -2,15 +2,9 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C4,C6,C8,C9,C11)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
-}
-
-node storage_overstuffed
-{
-     label = "C4";
-     position = (358 174);
-     states = ("yes" "no");
 }
 
 node app_not_responding
@@ -20,55 +14,62 @@ node app_not_responding
      states = ("yes" "no");
 }
 
+node storage_overstuffed
+{
+     label = "C1";
+     position = (307 157);
+     states = ("yes" "no");
+}
+
 node corrupt_files
 {
-     label = "C8";
-     position = (576 1);
+     label = "C2";
+     position = (570 1);
      states = ("yes" "no");
 }
 
 node os_outdated
 {
-     label = "C9";
-     position = (818 165);
+     label = "C3";
+     position = (805 164);
      states = ("yes" "no");
 }
 
 node missing_files
 {
-     label = "C11";
-     position = (587 293);
+     label = "C4";
+     position = (593 294);
      states = ("yes" "no");
-}
-
-potential (storage_overstuffed)
-{
- data = ( 0.1 0.9 );
 }
 
 potential (app_not_responding | missing_files os_outdated corrupt_files storage_overstuffed)
 {
- data = ((((( 0.9 0.1 )
-( 0.65 0.35 ))
-(( 0.6 0.4 )
-( 0.5 0.5 )))
-((( 0.8 0.2 )
-( 0.7 0.3 ))
-(( 0.55 0.45 )
-( 0.45 0.55 ))))
-(((( 0.6 0.4 )
-( 0.35 0.65 ))
-(( 0.45 0.55 )
-( 0.3 0.7 )))
-((( 0.42 0.58 )
-( 0.36 0.64 ))
-(( 0.2 0.8 )
-( 0.05 0.95 )))));
+ data = ((((( 0.4925 0.5075 )
+( 0.4925 0.5075 ))
+(( 0.4925 0.5075 )
+( 0.4925 0.5075 )))
+((( 0.4925 0.5075 )
+( 0.4925 0.5075 ))
+(( 0.4925 0.5075 )
+( 0.4925 0.5075 ))))
+(((( 0.4925 0.5075 )
+( 0.4925 0.5075 ))
+(( 0.4925 0.5075 )
+( 0.4925 0.5075 )))
+((( 0.4925 0.5075 )
+( 0.4925 0.5075 ))
+(( 0.4925 0.5075 )
+( 0.4925 0.5075 )))));
+}
+
+potential (storage_overstuffed)
+{
+ data = ( 0.25 0.75 );
 }
 
 potential (corrupt_files)
 {
- data = ( 0.5 0.5 );
+ data = ( 0.15 0.85 );
 }
 
 potential (os_outdated)
