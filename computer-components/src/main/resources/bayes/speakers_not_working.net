@@ -1,0 +1,84 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     tree = "(C2,C3,C4,C5)";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node speakers_not_working
+{
+     label = "C2";
+     position = (515 140);
+     states = ("yes" "no");
+}
+
+node cables_connection
+{
+     label = "C3";
+     position = (262 170);
+     states = ("yes" "no");
+}
+
+node software_glitch
+{
+     label = "C4";
+     position = (504 7);
+     states = ("yes" "no");
+}
+
+node driver_malfunction
+{
+     label = "C5";
+     position = (753 171);
+     states = ("yes" "no");
+}
+
+node speakers_malfunction
+{
+     label = "C1";
+     position = (523 245);
+     states = ("yes" "no");
+}
+
+potential (speakers_not_working | speakers_malfunction driver_malfunction software_glitch cables_connection)
+{
+ data = ((((( 0.97 0.03 )
+( 0.85 0.15 ))
+(( 0.87 0.13 )
+( 0.8 0.2 )))
+((( 0.82 0.18 )
+( 0.75 0.25 ))
+(( 0.7 0.3 )
+( 0.4 0.6 ))))
+(((( 0.89 0.11 )
+( 0.8 0.2 ))
+(( 0.82 0.18 )
+( 0.77 0.23 )))
+((( 0.85 0.15 )
+( 0.6 0.4 ))
+(( 0.7 0.3 )
+( 0.4 0.6 )))));
+}
+
+potential (cables_connection)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (software_glitch)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (driver_malfunction)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (speakers_malfunction)
+{
+ data = ( 0.1 0.9 );
+}
+

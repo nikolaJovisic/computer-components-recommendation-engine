@@ -2,6 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C2,C3,C4,C6,C1)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -15,40 +16,40 @@ node blank_screen
 
 node cables_connection
 {
-     label = "C3";
-     position = (328 201);
+     label = "C1";
+     position = (292 203);
      states = ("yes" "no");
 }
 
 node software_glitch
 {
-     label = "C4";
-     position = (512 15);
+     label = "C2";
+     position = (500 15);
      states = ("yes" "no");
 }
 
 node driver_malfunction
 {
-     label = "C6";
-     position = (773 199);
+     label = "C3";
+     position = (695 172);
      states = ("yes" "no");
 }
 
 potential (blank_screen | driver_malfunction software_glitch cables_connection)
 {
  data = (((( 0.9 0.1 )
-( 0.75 0.25 ))
-(( 0.8 0.2 )
-( 0.6 0.4 )))
-((( 0.55 0.45 )
-( 0.45 0.55 ))
-(( 0.3 0.7 )
-( 0.2 0.8 ))));
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.8 0.2 )))
+((( 0.6 0.4 )
+( 0.57 0.43 ))
+(( 0.58 0.42 )
+( 0.1 0.9 ))));
 }
 
 potential (cables_connection)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.3 0.7 );
 }
 
 potential (software_glitch)
@@ -58,6 +59,6 @@ potential (software_glitch)
 
 potential (driver_malfunction)
 {
- data = ( 0.4 0.6 );
+ data = ( 0.2 0.8 );
 }
 

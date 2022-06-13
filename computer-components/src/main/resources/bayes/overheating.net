@@ -1,0 +1,63 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node overheating
+{
+     label = "C3";
+     position = (376 295);
+     states = ("yes" "no");
+}
+
+node insufficient_cooling
+{
+     label = "C6";
+     position = (571 281);
+     states = ("yes" "no");
+}
+
+node os_glitch
+{
+     label = "C8";
+     position = (79 317);
+     states = ("yes" "no");
+}
+
+node gpu_overused
+{
+     label = "C10";
+     position = (330 189);
+     states = ("yes" "no");
+}
+
+potential (overheating | insufficient_cooling gpu_overused os_glitch)
+{
+ data = (((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.5 0.5 )
+( 0.2 0.8 )))
+((( 0.55 0.45 )
+( 0.5 0.5 ))
+(( 0.1 0.9 )
+( 0.05 0.95 ))));
+}
+
+potential (insufficient_cooling)
+{
+ data = ( 0.01 0.99 );
+}
+
+potential (os_glitch)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (gpu_overused)
+{
+ data = ( 0.1 0.9 );
+}
+

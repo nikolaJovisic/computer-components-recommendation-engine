@@ -1,0 +1,64 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     tree = "(C2,C3,C4,C5)";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node system_clock_keeps_reseting
+{
+     label = "C2";
+     position = (441 198);
+     states = ("yes" "no");
+}
+
+node virus
+{
+     label = "C3";
+     position = (181 183);
+     states = ("yes" "no");
+}
+
+node corrupt_files
+{
+     label = "C4";
+     position = (421 30);
+     states = ("yes" "no");
+}
+
+node insufficient_power_source
+{
+     label = "C5";
+     position = (650 168);
+     states = ("yes" "no");
+}
+
+potential (system_clock_keeps_reseting | insufficient_power_source corrupt_files virus)
+{
+ data = (((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.8 0.2 )))
+((( 0.3 0.7 )
+( 0.2 0.8 ))
+(( 0.2 0.8 )
+( 0.1 0.9 ))));
+}
+
+potential (virus)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (corrupt_files)
+{
+ data = ( 0.15 0.85 );
+}
+
+potential (insufficient_power_source)
+{
+ data = ( 0.02 0.98 );
+}
+

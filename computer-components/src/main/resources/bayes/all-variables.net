@@ -80,7 +80,7 @@ node cables_connection
 node driver_malfunction
 {
      label = "C11";
-     position = (170 395);
+     position = (170 403);
      states = ("yes" "no");
 }
 
@@ -88,7 +88,7 @@ node storage_disconnected
 {
      label = "C12";
      position = (11 457);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node ram_disconnected
@@ -109,7 +109,7 @@ node insufficient_ram
 {
      label = "C15";
      position = (322 473);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node corrupt_files
@@ -137,7 +137,7 @@ node insufficient_cooling
 {
      label = "C19";
      position = (606 472);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node gpu_disconnected
@@ -186,7 +186,7 @@ node storage_corruption
 {
      label = "C26";
      position = (282 210);
-     states = ("State 0");
+     states = ("yes" "no");
 }
 
 node os_outdated
@@ -242,7 +242,7 @@ node fans_blocked
 {
      label = "C35";
      position = (519 13);
-     states = ("yes");
+     states = ("yes" "no");
 }
 
 node cpu_overused
@@ -304,8 +304,29 @@ node microphone_not_wokring
 node app_not_responding
 {
      label = "C45";
-     position = (657 695);
+     position = (654 711);
      states = ("State 0");
+}
+
+node stuck_printer_spooler
+{
+     label = "C1";
+     position = (615 2);
+     states = ("yes" "no");
+}
+
+node printer_overuse
+{
+     label = "C2";
+     position = (671 75);
+     states = ("yes" "no");
+}
+
+node empty_battery
+{
+     label = "C3";
+     position = (890 37);
+     states = ("yes" "no");
 }
 
 potential (computer_wont_start)
@@ -355,22 +376,22 @@ potential (no_internet_connection)
 
 potential (cables_connection)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.3 0.7 );
 }
 
 potential (driver_malfunction)
 {
- data = ( 0.4 0.6 );
+ data = ( 0.2 0.8 );
 }
 
 potential (storage_disconnected)
 {
- data = ( 1.0 );
+ data = ( 0.02 0.98 );
 }
 
 potential (ram_disconnected)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.05 0.95 );
 }
 
 potential (virus)
@@ -380,12 +401,12 @@ potential (virus)
 
 potential (insufficient_ram)
 {
- data = ( 1.0 );
+ data = ( 0.2 0.8 );
 }
 
 potential (corrupt_files)
 {
- data = ( 0.5 0.5 );
+ data = ( 0.15 0.85 );
 }
 
 potential (missing_files)
@@ -395,12 +416,12 @@ potential (missing_files)
 
 potential (fans_malfunction)
 {
- data = ( 0.15 0.85 );
+ data = ( 0.01 0.99 );
 }
 
 potential (insufficient_cooling)
 {
- data = ( 1.0 );
+ data = ( 0.01 0.99 );
 }
 
 potential (gpu_disconnected)
@@ -410,7 +431,7 @@ potential (gpu_disconnected)
 
 potential (gpu_overused)
 {
- data = ( 0.6 0.4 );
+ data = ( 0.1 0.9 );
 }
 
 potential (insufficient_power_source)
@@ -430,12 +451,12 @@ potential (software_glitch)
 
 potential (bios_glitch)
 {
- data = ( 0.85 0.15 );
+ data = ( 0.1 0.9 );
 }
 
 potential (storage_corruption)
 {
- data = ( 1.0 );
+ data = ( 0.1 0.9 );
 }
 
 potential (os_outdated)
@@ -465,7 +486,7 @@ potential (insufficient_anti_virus)
 
 potential (storage_overstuffed)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.25 0.75 );
 }
 
 potential (speakers_malfunction)
@@ -475,12 +496,12 @@ potential (speakers_malfunction)
 
 potential (fans_blocked)
 {
- data = ( 1.0 );
+ data = ( 0.01 0.99 );
 }
 
 potential (cpu_overused)
 {
- data = ( 0.5 0.5 );
+ data = ( 0.15 0.85 );
 }
 
 potential (slow_internet)
@@ -521,5 +542,20 @@ potential (microphone_not_wokring)
 potential (app_not_responding)
 {
  data = ( 1.0 );
+}
+
+potential (stuck_printer_spooler)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (printer_overuse)
+{
+ data = ( 0.01 0.99 );
+}
+
+potential (empty_battery)
+{
+ data = ( 0.05 0.95 );
 }
 

@@ -2,7 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
-     tree = "(C2,C3,C4,C5)";
+     tree = "(C2,C3,C4,C5,C1)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -10,41 +10,41 @@ net
 node not_booting
 {
      label = "C2";
-     position = (451 124);
+     position = (447 158);
      states = ("yes" "no");
 }
 
 node insufficient_power_source
 {
-     label = "C3";
-     position = (167 115);
+     label = "C1";
+     position = (192 121);
      states = ("yes" "no");
 }
 
 node cables_connection
 {
-     label = "C4";
-     position = (452 9);
+     label = "C2";
+     position = (451 60);
      states = ("yes" "no");
 }
 
 node gpu_disconnected
 {
-     label = "C5";
-     position = (739 137);
+     label = "C3";
+     position = (727 159);
      states = ("yes" "no");
 }
 
 potential (not_booting | gpu_disconnected cables_connection insufficient_power_source)
 {
- data = (((( 0.99 0.01 )
+ data = (((( 0.95 0.05 )
 ( 0.9 0.1 ))
-(( 0.87 0.13 )
-( 0.8 0.2 )))
-((( 0.7 0.3 )
-( 0.6 0.4 ))
-(( 0.3 0.7 )
-( 0.25 0.75 ))));
+(( 0.9 0.1 )
+( 0.2 0.8 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.2 0.8 ))));
 }
 
 potential (insufficient_power_source)
@@ -54,7 +54,7 @@ potential (insufficient_power_source)
 
 potential (cables_connection)
 {
- data = ( 0.1 0.9 );
+ data = ( 0.3 0.7 );
 }
 
 potential (gpu_disconnected)
