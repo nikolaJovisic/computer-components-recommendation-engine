@@ -1,0 +1,63 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node no_internet_connection
+{
+     label = "C2";
+     position = (563 126);
+     states = ("yes" "no");
+}
+
+node cables_connection
+{
+     label = "C3";
+     position = (364 208);
+     states = ("yes" "no");
+}
+
+node router_glitch
+{
+     label = "C4";
+     position = (401 22);
+     states = ("yes" "no");
+}
+
+node provider_glitch
+{
+     label = "C5";
+     position = (762 22);
+     states = ("yes" "no");
+}
+
+potential (no_internet_connection | provider_glitch router_glitch cables_connection)
+{
+ data = (((( 0.97 0.03 )
+( 0.4 0.6 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.35 0.65 )
+( 0.25 0.75 ))
+(( 0.29 0.71 )
+( 0.05 0.95 ))));
+}
+
+potential (cables_connection)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (router_glitch)
+{
+ data = ( 0.45 0.55 );
+}
+
+potential (provider_glitch)
+{
+ data = ( 0.05 0.95 );
+}
+

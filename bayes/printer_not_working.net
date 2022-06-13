@@ -1,0 +1,63 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node printer_not_working
+{
+     label = "C2";
+     position = (519 143);
+     states = ("yes" "no");
+}
+
+node driver_malfunction
+{
+     label = "C3";
+     position = (273 203);
+     states = ("yes" "no");
+}
+
+node stuck_printer_spooler
+{
+     label = "C4";
+     position = (516 24);
+     states = ("yes" "no");
+}
+
+node printer_overuse
+{
+     label = "C5";
+     position = (653 185);
+     states = ("yes" "no");
+}
+
+potential (printer_not_working | printer_overuse stuck_printer_spooler driver_malfunction)
+{
+ data = (((( 0.93 0.07 )
+( 0.72 0.28 ))
+(( 0.23 0.77 )
+( 0.15 0.85 )))
+((( 0.85 0.15 )
+( 0.8 0.2 ))
+(( 0.17 0.83 )
+( 0.1 0.9 ))));
+}
+
+potential (driver_malfunction)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (stuck_printer_spooler)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (printer_overuse)
+{
+ data = ( 0.01 0.99 );
+}
+

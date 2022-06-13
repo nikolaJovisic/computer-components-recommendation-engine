@@ -1,0 +1,63 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node keyboard_not_working
+{
+     label = "C2";
+     position = (508 153);
+     states = ("yes" "no");
+}
+
+node empty_battery
+{
+     label = "C3";
+     position = (280 231);
+     states = ("yes" "no");
+}
+
+node cables_connection
+{
+     label = "C4";
+     position = (734 250);
+     states = ("yes" "no");
+}
+
+node driver_malfunction
+{
+     label = "C5";
+     position = (473 2);
+     states = ("yes" "no");
+}
+
+potential (keyboard_not_working | driver_malfunction cables_connection empty_battery)
+{
+ data = (((( 0.9 0.1 )
+( 0.5 0.5 ))
+(( 0.7 0.3 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.35 0.65 ))
+(( 0.4 0.6 )
+( 0.15 0.85 ))));
+}
+
+potential (empty_battery)
+{
+ data = ( 0.05 0.95 );
+}
+
+potential (cables_connection)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (driver_malfunction)
+{
+ data = ( 0.2 0.8 );
+}
+
