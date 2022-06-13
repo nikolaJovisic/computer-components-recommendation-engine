@@ -1,5 +1,7 @@
 package com.example.computercomponents;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +22,8 @@ public class ComputerComponentsApplication {
 	public class SpringFoxConfig {
 		@Bean
 		public Docket api() {
+			Logger logger = LoggerFactory.getLogger(ComputerComponentsApplication.class);
+			logger.info("Swagger started at: 'http://localhost:8080/swagger-ui.html'");
 			return new Docket(DocumentationType.SWAGGER_2)
 					.select()
 					.apis(RequestHandlerSelectors.any())
