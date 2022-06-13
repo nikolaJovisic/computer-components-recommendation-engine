@@ -99,6 +99,6 @@ public class ComponentService {
         queryStr.append(propertyName);
         queryStr.append(" ?o.");
         queryStr.append("}");
-        return queryService.getQueryResult(queryStr);
+        return queryService.getQueryPropertiesResult(queryStr);
     }
 }

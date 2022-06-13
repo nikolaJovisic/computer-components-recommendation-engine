@@ -50,18 +50,31 @@ public  class OntologyQueryService {
 
         var rawResponse =  executeQuery(q);
         var components = new ArrayList<String>();
-        try{
-            for(var rawRam : rawResponse){
-                components.add(rawRam.split("#")[1].split(">")[0]);
-            }
-        }catch (Exception e){
-            for(var rawRam : rawResponse){
-                components.add(rawRam.split("=")[1].split(" ")[1]);
-            }
-        }
+        for(var rawRam : rawResponse)
+            components.add(rawRam.split("#")[1].split(">")[0]);
+
+
 
         return components;
     }
+
+     public ArrayList<String> getQueryPropertiesResult(ParameterizedSparqlString queryStr) {
+         Query q = queryStr.asQuery();
+
+         var rawResponse =  executeQuery(q);
+         var components = new ArrayList<String>();
+         for(var rawRam : rawResponse){
+             if(rawRam.contains("double"))
+                 components.add(rawRam.split("\"")[1].split("\"")[0]);
+             else
+                components.add(rawRam.split("=")[1].split(" ")[1]);
+         }
+         return components;
+
+     }
+
+
+
 
     public List<String> PrintQuery(ResultSet resultSet){
         System.out.println("################ QUERY RESULT #######################");

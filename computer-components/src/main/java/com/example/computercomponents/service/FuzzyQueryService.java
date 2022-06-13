@@ -1,5 +1,7 @@
 package com.example.computercomponents.service;
 
+import com.example.computercomponents.constants.FuzzyVariables;
+import com.example.computercomponents.constants.OntologyProperties;
 import com.example.computercomponents.constants.URL;
 import com.example.computercomponents.controller.dto.FuzzyResponseDTO;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -17,8 +19,10 @@ public class FuzzyQueryService {
     private FIS fis;
     private List<String> computerUsages;
     private String blockName;
+    private final ComponentService componentService;
 
-    public FuzzyQueryService() throws URISyntaxException {
+    public FuzzyQueryService(ComponentService componentService) throws URISyntaxException {
+        this.componentService = componentService;
         var path = TypeReference.class.getResource(URL.FUZZY_LOGIC_PATH).toURI().getPath();
         this.fis = FIS.load(path, true);
         if (fis != null)
@@ -28,12 +32,12 @@ public class FuzzyQueryService {
         blockName = "sablon";
     }
 
-    public List<FuzzyResponseDTO> performQuery(int threadNumber, int gpuHashRate, int ramSize, int storageSize, int gpuSize) {
-        fis.setVariable("threadNumber", threadNumber);
-        fis.setVariable("ramSize", ramSize);
-        fis.setVariable("gpuSize", gpuSize);
-        fis.setVariable("storageSize", storageSize);
-        fis.setVariable("gpuHashRate", gpuHashRate);
+    public List<FuzzyResponseDTO> performQuery(int threadNumber, double gpuHashRate, int ramSize, int storageSize, int gpuSize) {
+        fis.setVariable(FuzzyVariables.THREAD_NUM, threadNumber);
+        fis.setVariable(FuzzyVariables.RAM_SIZE, ramSize);
+        fis.setVariable(FuzzyVariables.GPU_SIZE, gpuSize);
+        fis.setVariable(FuzzyVariables.STORAGE_SIZE, storageSize);
+        fis.setVariable(FuzzyVariables.HASH_RATE, gpuHashRate);
         fis.evaluate();
 
         var response = new ArrayList<FuzzyResponseDTO>();
@@ -44,5 +48,26 @@ public class FuzzyQueryService {
         }
 
         return response;
+    }
+
+    public List<FuzzyResponseDTO>  performQuery(String cpuName, String gpuName, String ramName, String storageName) {
+        int threadNumber;
+        double gpuHashRate;
+        int ramSize;
+        int storageSize;
+        int gpuSize;
+        try {
+             threadNumber = Integer.parseInt(componentService.getComponentProperty(cpuName, OntologyProperties.THREAD_NUM).get(0));
+             gpuHashRate = Double.parseDouble(componentService.getComponentProperty(gpuName, OntologyProperties.HASH_RATE).get(0));
+             ramSize = Integer.parseInt(componentService.getComponentProperty(ramName, OntologyProperties.STORAGE_SIZE).get(0));
+             storageSize = Integer.parseInt(componentService.getComponentProperty(storageName, OntologyProperties.STORAGE_SIZE).get(0));
+             gpuSize = Integer.parseInt(componentService.getComponentProperty(gpuName, OntologyProperties.STORAGE_SIZE).get(0));
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+
+        return performQuery(threadNumber,gpuHashRate,ramSize,storageSize,gpuSize);
     }
 }
