@@ -23,21 +23,19 @@ import java.util.List;
 public class BayesQueryService {
 
     // YES STATE
-    private final int stateIndex = 0;
+    private final int YES_STATE = 0;
 
     public List<BayesResponseDTO> createQuery(String symptom) throws IOException, URISyntaxException {
-        BaseIO io = new NetIO();
-        var path = TypeReference.class.getResource(URL.BAYES_LOGIC_PATH).toURI().getPath() +"/"+ symptom +".net";
-        var net = (ProbabilisticNetwork) io.load(new File(path));
 
-        // compiling
-        IInferenceAlgorithm algorithm = new JunctionTreeAlgorithm();
-        algorithm.setNetwork(net);
-        algorithm.run();
-        
+        var net = getProbabilisticNetwork(symptom);
+        net.setName(symptom);
+
+        // compile
+        compileNetwork(net);
+
         //set state
-        ProbabilisticNode factNode = (ProbabilisticNode)net.getNode(symptom);
-        factNode.addFinding(stateIndex);
+        var factNode = (ProbabilisticNode)net.getNode(symptom);
+        factNode.addFinding(YES_STATE);
 
         // propagation
         try {
@@ -46,13 +44,41 @@ public class BayesQueryService {
             System.out.println(e.getMessage());
         }
 
-        // states overview after propagation
+        printNodes(net);
+        return getOutputVariables(net);
+    }
+
+    private void compileNetwork(ProbabilisticNetwork net) {
+        IInferenceAlgorithm algorithm = new JunctionTreeAlgorithm();
+        algorithm.setNetwork(net);
+        algorithm.run();
+    }
+
+    private ProbabilisticNetwork getProbabilisticNetwork(String symptom) throws URISyntaxException, IOException {
+        BaseIO io = new NetIO();
+        var path = TypeReference.class.getResource(URL.BAYES_LOGIC_PATH).toURI().getPath() +"/"+ symptom +".net";
+        var net = (ProbabilisticNetwork) io.load(new File(path));
+        return net;
+    }
+
+    private List<BayesResponseDTO> getOutputVariables(ProbabilisticNetwork net) {
         List<Node> nodeList = net.getNodes();
         List<BayesResponseDTO> response = new ArrayList<>();
         for (Node node : nodeList) {
-            response.add(new BayesResponseDTO(node.getName(),((ProbabilisticNode)node).getMarginalAt(stateIndex)));
+            response.add(new BayesResponseDTO(node.getName(),((ProbabilisticNode)node).getMarginalAt(YES_STATE)));
         }
 
         return response;
+    }
+
+    private void printNodes(ProbabilisticNetwork net){
+        System.out.println("\n\n------"+net.getName()+"--------");
+        List<Node> nodeList = net.getNodes();
+        for (Node node : nodeList) {
+            System.out.println("\n"+node.getName());
+            for (int i = 0; i < node.getStatesSize(); i++)
+                System.out.println(node.getStateAt(i) + ": " + ((ProbabilisticNode)node).getMarginalAt(i));
+
+        }
     }
 }
