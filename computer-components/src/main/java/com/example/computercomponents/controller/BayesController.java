@@ -5,10 +5,7 @@ import com.example.computercomponents.service.BayesQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +21,8 @@ public class BayesController {
         this.bayesQueryService = bayesQueryService;
     }
 
-    @PostMapping()
-    public ResponseEntity<List<BayesResponseDTO>> createBayesQuery(@RequestBody String symptom){
+    @PostMapping("/{symptom}")
+    public ResponseEntity<List<BayesResponseDTO>> createBayesQuery(@PathVariable String symptom){
         List<BayesResponseDTO> response = new ArrayList<>();
         try{
              response = bayesQueryService.createQuery(symptom);
