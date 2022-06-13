@@ -2,7 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
-     tree = "(C4,C6,C8,C9,C11)";
+     tree = "(C4,C6,C8,C9,C11,C1,C2,C3)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -10,7 +10,7 @@ net
 node app_not_responding
 {
      label = "C6";
-     position = (585 176);
+     position = (569 149);
      states = ("yes" "no");
 }
 
@@ -44,22 +44,22 @@ node missing_files
 
 potential (app_not_responding | missing_files os_outdated corrupt_files storage_overstuffed)
 {
- data = ((((( 0.4925 0.5075 )
-( 0.4925 0.5075 ))
-(( 0.4925 0.5075 )
-( 0.4925 0.5075 )))
-((( 0.4925 0.5075 )
-( 0.4925 0.5075 ))
-(( 0.4925 0.5075 )
-( 0.4925 0.5075 ))))
-(((( 0.4925 0.5075 )
-( 0.4925 0.5075 ))
-(( 0.4925 0.5075 )
-( 0.4925 0.5075 )))
-((( 0.4925 0.5075 )
-( 0.4925 0.5075 ))
-(( 0.4925 0.5075 )
-( 0.4925 0.5075 )))));
+ data = ((((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.8 0.2 )))
+((( 0.6 0.4 )
+( 0.57 0.43 ))
+(( 0.57 0.43 )
+( 0.53 0.47 ))))
+(((( 0.89 0.11 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.75 0.25 )))
+((( 0.6 0.4 )
+( 0.55 0.45 ))
+(( 0.55 0.45 )
+( 0.1 0.9 )))));
 }
 
 potential (storage_overstuffed)

@@ -2,6 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C2,C3,C4,C5)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -30,20 +31,20 @@ node software_glitch
 node cables_connection
 {
      label = "C5";
-     position = (551 0);
+     position = (551 60);
      states = ("yes" "no");
 }
 
 potential (usb_port_not_working | cables_connection software_glitch service_bus_problem)
 {
- data = (((( 1.0 0.0 )
-( 1.0 0.0 ))
-(( 1.0 0.0 )
-( 1.0 0.0 )))
-((( 1.0 0.0 )
-( 1.0 0.0 ))
-(( 1.0 0.0 )
-( 1.0 0.0 ))));
+ data = (((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.8 0.2 )))
+((( 0.8 0.2 )
+( 0.57 0.43 ))
+(( 0.57 0.43 )
+( 0.15 0.85 ))));
 }
 
 potential (service_bus_problem)
