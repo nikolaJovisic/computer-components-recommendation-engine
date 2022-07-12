@@ -153,9 +153,9 @@ FUNCTION_BLOCK sablon
 
         //dual rules
         RULE 47: IF threadNumber IS medium and ramSize is medium THEN programmingUsage IS medium;
-        RULE 48: IF threadNumber IS medium and ramSize is large THEN programmingUsage IS high;
+        RULE 48: IF threadNumber IS medium and ramSize is big THEN programmingUsage IS high;
         RULE 49: IF threadNumber IS low and ramSize is medium THEN programmingUsage IS low;
-        RULE 50: IF threadNumber IS low and ramSize is low THEN programmingUsage IS low;
+        RULE 50: IF threadNumber IS low and ramSize is small THEN programmingUsage IS low;
 
         RULE 51: IF ramSize IS small and gpuSize IS big THEN programmingUsage IS low;
         RULE 52: IF ramSize IS medium and gpuSize IS big THEN programmingUsage IS medium;
