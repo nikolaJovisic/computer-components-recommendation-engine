@@ -1,4 +1,4 @@
-ursa_major
+-ursa_major
 	-simptome
 		-blue_screen
 		-self_restart
@@ -11,7 +11,7 @@ ursa_major
 		-fans_malfunction
 		-os_glitch
 		-gpu_overused
-	-dijagnoze(covek)
+	-uzrok(covek)
 		-using_torrent
 		-droped_computer
 		-spill_water
@@ -35,6 +35,24 @@ ursa_major
 		-insufficient_cooling
 		-software_glitch
 		-driver_malfunction
-	-dijagnoze(covek)
+	-uzrok(covek)
 		-droped_computer
 		-spill_water
+
+-aquarius
+	-simptomi
+		-empty_battery
+		-cables_connection
+		-driver_malfunction
+		-stuck_printer_spooler
+		-printer_overuse
+		-speakers_malfunction
+		-software_glitch
+	-dijagnoze(racunar)
+		-keyboard_not_working
+		-mouse_not_working
+		-printer_not_working
+		-speakers_not_working
+	-uzrok(covek)
+		-left_on_sun
+		-droped_computer
