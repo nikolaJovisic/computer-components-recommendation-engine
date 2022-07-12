@@ -2,105 +2,105 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
 
-node driver_malfunction
+node blue_screen
 {
-     label = "C6";
-     position = (752 239);
+     label = "C3";
+     position = (823 155);
      states = ("yes" "no");
 }
 
 node insufficient_anti_virus
 {
-     label = "C7";
-     position = (423 497);
+     label = "C4";
+     position = (600 147);
      states = ("yes" "no");
 }
 
-node blue_screen
+node driver_malfunction
 {
-     label = "C8";
-     position = (672 370);
+     label = "C5";
+     position = (811 31);
      states = ("yes" "no");
 }
 
 node virus
 {
-     label = "C9";
-     position = (951 393);
-     states = ("yes" "no");
-}
-
-node ram_disconnected
-{
-     label = "C14";
-     position = (433 218);
-     states = ("yes" "no");
-}
-
-node droped_computer
-{
-     label = "C16";
-     position = (483 55);
-     states = ("yes" "no");
-}
-
-node spill_water
-{
-     label = "C19";
-     position = (809 140);
-     states = ("yes" "no");
-}
-
-node using_torrrent
-{
-     label = "C20";
-     position = (1049 621);
-     states = ("yes" "no");
-}
-
-node bios_glitch
-{
-     label = "C23";
-     position = (1258 340);
-     states = ("yes" "no");
-}
-
-node gpu_overused
-{
-     label = "C24";
-     position = (1700 522);
-     states = ("yes" "no");
-}
-
-node fans_malfunction
-{
-     label = "C25";
-     position = (1540 135);
+     label = "C6";
+     position = (499 243);
      states = ("yes" "no");
 }
 
 node os_glitch
 {
-     label = "C26";
-     position = (1407 511);
+     label = "C7";
+     position = (135 167);
      states = ("yes" "no");
 }
 
 node self_restart
 {
-     label = "C27";
-     position = (1573 309);
+     label = "C8";
+     position = (299 339);
      states = ("yes" "no");
 }
 
-potential (driver_malfunction | spill_water)
+node bios_glitch
 {
- data = (( 0.6 0.4 )
-( 0.2 0.8 ));
+     label = "C9";
+     position = (38 333);
+     states = ("yes" "no");
+}
+
+node fans_malfunction
+{
+     label = "C10";
+     position = (781 325);
+     states = ("yes" "no");
+}
+
+node gpu_overused
+{
+     label = "C11";
+     position = (305 465);
+     states = ("yes" "no");
+}
+
+node using_torrent
+{
+     label = "C12";
+     position = (787 257);
+     states = ("yes" "no");
+}
+
+node droped_computer
+{
+     label = "C13";
+     position = (1338 115);
+     states = ("yes" "no");
+}
+
+node spill_water
+{
+     label = "C14";
+     position = (1207 379);
+     states = ("yes" "no");
+}
+
+potential (blue_screen | virus driver_malfunction insufficient_anti_virus)
+{
+ data = (((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.8 0.2 )))
+((( 0.8 0.2 )
+( 0.57 0.43 ))
+(( 0.57 0.43 )
+( 0.1 0.9 ))));
 }
 
 potential (insufficient_anti_virus)
@@ -108,79 +108,28 @@ potential (insufficient_anti_virus)
  data = ( 0.2 0.8 );
 }
 
-potential (blue_screen | ram_disconnected virus driver_malfunction insufficient_anti_virus)
+potential (driver_malfunction | spill_water droped_computer)
 {
- data = ((((( 0.9 0.1 )
-( 0.85 0.15 ))
-(( 0.83 0.17 )
-( 0.8 0.2 )))
-((( 0.8 0.2 )
-( 0.57 0.43 ))
-(( 0.57 0.43 )
-( 0.1 0.9 ))))
-(((( 0.8 0.2 )
-( 0.85 0.15 ))
-(( 0.83 0.17 )
-( 0.8 0.2 )))
-((( 0.8 0.2 )
-( 0.57 0.43 ))
-(( 0.57 0.43 )
-( 0.1 0.9 )))));
+ data = ((( 0.8 0.2 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.2 0.8 )));
 }
 
-potential (virus | using_torrrent)
+potential (virus | using_torrent)
 {
- data = (( 0.6 0.4 )
+ data = (( 0.8 0.2 )
 ( 0.2 0.8 ));
 }
 
-potential (ram_disconnected)
-{
- data = (( 0.5 0.5 )
-( 0.05 0.95 ));
-}
-
-potential (droped_computer)
-{
- data = ( 0.3 0.7 );
-}
-
-potential (spill_water)
-{
- data = ( 0.3 0.7 );
-}
-
-potential (using_torrrent)
-{
- data = ( 0.5 0.5 );
-}
-
-potential (bios_glitch | virus)
-{
- data = (( 0.2 0.8 )
-( 0.1 0.9 ));
-}
-
-potential (gpu_overused)
+potential (os_glitch)
 {
  data = ( 0.1 0.9 );
 }
 
-potential (fans_malfunction | spill_water)
+potential (self_restart | virus bios_glitch fans_malfunction os_glitch gpu_overused)
 {
- data = (( 0.2 0.8 )
-( 0.01 0.99 ));
-}
-
-potential (os_glitch | virus)
-{
- data = (( 0.3 0.7 )
-( 0.1 0.9 ));
-}
-
-potential (self_restart | bios_glitch os_glitch fans_malfunction gpu_overused)
-{
- data = ((((( 0.9 0.1 )
+ data = (((((( 0.9 0.1 )
 ( 0.85 0.15 ))
 (( 0.83 0.17 )
 ( 0.8 0.2 )))
@@ -195,6 +144,55 @@ potential (self_restart | bios_glitch os_glitch fans_malfunction gpu_overused)
 ((( 0.6 0.4 )
 ( 0.55 0.45 ))
 (( 0.55 0.45 )
-( 0.1 0.9 )))));
+( 0.1 0.9 )))))
+((((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.8 0.2 )))
+((( 0.6 0.4 )
+( 0.57 0.43 ))
+(( 0.57 0.43 )
+( 0.53 0.47 ))))
+(((( 0.89 0.11 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.75 0.25 )))
+((( 0.6 0.4 )
+( 0.55 0.45 ))
+(( 0.55 0.45 )
+( 0.1 0.9 ))))));
+}
+
+potential (bios_glitch)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (fans_malfunction | spill_water droped_computer)
+{
+ data = ((( 0.2 0.8 )
+( 0.1 0.9 ))
+(( 0.1 0.9 )
+( 0.01 0.99 )));
+}
+
+potential (gpu_overused)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (using_torrent)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (droped_computer)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (spill_water)
+{
+ data = ( 0.2 0.8 );
 }
 
