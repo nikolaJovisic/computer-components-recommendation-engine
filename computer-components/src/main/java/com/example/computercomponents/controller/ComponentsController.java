@@ -24,7 +24,7 @@ public class ComponentsController {
     }
 
 
-    @GetMapping()
+    @PostMapping()
     public ResponseEntity<List<String>> performQuery(@RequestBody String query){
         var response = queryService.executeQuery(query);
         return new ResponseEntity<>(response, HttpStatus.OK);

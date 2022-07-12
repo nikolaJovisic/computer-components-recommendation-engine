@@ -151,6 +151,28 @@ FUNCTION_BLOCK sablon
         RULE 45: IF ramSize IS big THEN programmingUsage IS high;
         RULE 46: IF ramSize IS ultra THEN programmingUsage IS low;
 
+        //dual rules
+        RULE 47: IF threadNumber IS medium and ramSize is medium THEN programmingUsage IS medium;
+        RULE 48: IF threadNumber IS medium and ramSize is large THEN programmingUsage IS high;
+        RULE 49: IF threadNumber IS low and ramSize is medium THEN programmingUsage IS low;
+        RULE 50: IF threadNumber IS low and ramSize is low THEN programmingUsage IS low;
+
+        RULE 51: IF ramSize IS small and gpuSize IS big THEN programmingUsage IS low;
+        RULE 52: IF ramSize IS medium and gpuSize IS big THEN programmingUsage IS medium;
+        RULE 53: IF ramSize IS small and gpuSize IS small THEN programmingUsage IS low;
+        RULE 54: IF ramSize IS medium and gpuSize IS small THEN programmingUsage IS medium;
+
+        //mixed(3) rules
+        RULE 55: IF threadNumber IS low and ramSize IS small and storageSize is small THEN programmingUsage IS low;
+        RULE 56: IF threadNumber IS medium and ramSize IS big and storageSize is medium THEN programmingUsage IS high;
+        RULE 57: IF threadNumber IS medium and ramSize IS big and storageSize is small THEN programmingUsage IS medium;
+        RULE 58: IF threadNumber IS low and ramSize IS small and storageSize is medium THEN programmingUsage IS low;
+
+        RULE 59: IF threadNumber IS medium and ramSize IS ultra and storageSize is big THEN programmingUsage IS high;
+        RULE 60: IF threadNumber IS ultra and ramSize IS ultra and storageSize is small THEN programmingUsage IS medium;
+        RULE 61: IF threadNumber IS medium and ramSize IS big and storageSize is ultra THEN programmingUsage IS medium;
+        RULE 62: IF threadNumber IS ultra and ramSize IS medium and storageSize is ultra THEN programmingUsage IS low;
+
     END_RULEBLOCK
 
 END_FUNCTION_BLOCK
