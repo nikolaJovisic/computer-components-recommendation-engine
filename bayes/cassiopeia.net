@@ -231,8 +231,7 @@ potential (os_glitch | spill_water_cause)
 
 potential (gpu_overused)
 {
- data = (( 0.1 0.9 )
-( 0.1 0.9 ));
+ data = ( 0.1 0.9 );
 }
 
 potential (frozen_screen_symptom | storage_overstuffed driver_malfunction software_glitch gpu_overused)
@@ -257,10 +256,8 @@ potential (frozen_screen_symptom | storage_overstuffed driver_malfunction softwa
 
 potential (storage_overstuffed)
 {
- data = ((( 0.25 0.75 )
-( 0.25 0.75 ))
-(( 0.25 0.75 )
-( 0.25 0.75 )));
+ data = ( 0.25 0.75 )
+;
 }
 
 potential (software_glitch | droped_computer_cause)
