@@ -54,7 +54,7 @@ public class BayesQueryService {
         algorithm.run();
     }
 
-    private ProbabilisticNetwork getProbabilisticNetwork(String symptom) throws URISyntaxException, IOException {
+    protected ProbabilisticNetwork getProbabilisticNetwork(String symptom) throws URISyntaxException, IOException {
         BaseIO io = new NetIO();
         var path = TypeReference.class.getResource(URL.BAYES_LOGIC_PATH).toURI().getPath() +"/"+ symptom +".net";
         var net = (ProbabilisticNetwork) io.load(new File(path));

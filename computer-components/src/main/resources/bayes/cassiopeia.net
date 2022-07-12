@@ -1,0 +1,284 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     tree = "(C20,C22,C23,C24,C26,C27,C28,C29,C31,C32,C33,C34,C35,C36,C37,C38,C41,C42)";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node app_not_responding_symptom
+{
+     label = "C20";
+     position = (374 359);
+     states = ("yes" "no");
+}
+
+node corrupt_files
+{
+     label = "C22";
+     position = (324 279);
+     states = ("yes" "no");
+}
+
+node os_outdated
+{
+     label = "C23";
+     position = (610 393);
+     states = ("yes" "no");
+}
+
+node missing_files
+{
+     label = "C24";
+     position = (398 523);
+     states = ("yes" "no");
+}
+
+node slow_symptom
+{
+     label = "C26";
+     position = (349 41);
+     states = ("yes" "no");
+}
+
+node cpu_overused
+{
+     label = "C27";
+     position = (115 101);
+     states = ("yes" "no");
+}
+
+node storage_corruption
+{
+     label = "C28";
+     position = (512 197);
+     states = ("yes" "no");
+}
+
+node insufficient_ram
+{
+     label = "C29";
+     position = (749 144);
+     states = ("yes" "no");
+}
+
+node overheating_symptom
+{
+     label = "C31";
+     position = (664 657);
+     states = ("yes" "no");
+}
+
+node insufficient_cooling
+{
+     label = "C32";
+     position = (1090 695);
+     states = ("yes" "no");
+}
+
+node os_glitch
+{
+     label = "C33";
+     position = (1040 598);
+     states = ("yes" "no");
+}
+
+node gpu_overused
+{
+     label = "C34";
+     position = (1974 159);
+     states = ("yes" "no");
+}
+
+node frozen_screen_symptom
+{
+     label = "C35";
+     position = (1118 291);
+     states = ("yes" "no");
+}
+
+node storage_overstuffed
+{
+     label = "C36";
+     position = (1960 75);
+     states = ("yes" "no");
+}
+
+node software_glitch
+{
+     label = "C37";
+     position = (1494 292);
+     states = ("yes" "no");
+}
+
+node driver_malfunction
+{
+     label = "C38";
+     position = (1174 432);
+     states = ("yes" "no");
+}
+
+node droped_computer_cause
+{
+     label = "C41";
+     position = (1659 678);
+     states = ("yes" "no");
+}
+
+node spill_water_cause
+{
+     label = "C42";
+     position = (1403 588);
+     states = ("yes" "no");
+}
+
+potential (app_not_responding_symptom | missing_files storage_overstuffed os_outdated corrupt_files)
+{
+ data = ((((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.8 0.2 )))
+((( 0.6 0.4 )
+( 0.57 0.43 ))
+(( 0.57 0.43 )
+( 0.53 0.47 ))))
+(((( 0.89 0.11 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.75 0.25 )))
+((( 0.6 0.4 )
+( 0.55 0.45 ))
+(( 0.55 0.45 )
+( 0.1 0.9 )))));
+}
+
+potential (corrupt_files)
+{
+ data = ( 0.15 0.85 );
+}
+
+potential (os_outdated)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (missing_files)
+{
+ data = ( 0.05 0.95 );
+}
+
+potential (slow_symptom | storage_corruption storage_overstuffed cpu_overused insufficient_ram)
+{
+ data = ((((( 0.97 0.03 )
+( 0.55 0.45 ))
+(( 0.9 0.1 )
+( 0.5 0.5 )))
+((( 0.3 0.7 )
+( 0.09 0.91 ))
+(( 0.2 0.8 )
+( 0.05 0.95 ))))
+(((( 0.5 0.5 )
+( 0.45 0.55 ))
+(( 0.42 0.58 )
+( 0.4 0.6 )))
+((( 0.13 0.87 )
+( 0.11 0.89 ))
+(( 0.1 0.9 )
+( 0.02 0.98 )))));
+}
+
+potential (cpu_overused)
+{
+ data = ( 0.15 0.85 );
+}
+
+potential (storage_corruption)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (insufficient_ram)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (overheating_symptom | os_glitch insufficient_cooling gpu_overused)
+{
+ data = (((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.5 0.5 )
+( 0.2 0.8 )))
+((( 0.55 0.45 )
+( 0.5 0.5 ))
+(( 0.1 0.9 )
+( 0.05 0.95 ))));
+}
+
+potential (insufficient_cooling | droped_computer_cause spill_water_cause)
+{
+ data = ((( 0.5 0.5 )
+( 0.2 0.8 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )));
+}
+
+potential (os_glitch | spill_water_cause)
+{
+ data = (( 0.3 0.7 )
+( 0.1 0.9 ));
+}
+
+potential (gpu_overused)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (frozen_screen_symptom | storage_overstuffed driver_malfunction software_glitch gpu_overused)
+{
+ data = ((((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.83 0.17 )
+( 0.79 0.21 )))
+((( 0.6 0.4 )
+( 0.57 0.43 ))
+(( 0.57 0.43 )
+( 0.53 0.47 ))))
+(((( 0.89 0.11 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.75 0.25 )))
+((( 0.7 0.3 )
+( 0.55 0.45 ))
+(( 0.45 0.55 )
+( 0.01 0.99 )))));
+}
+
+potential (storage_overstuffed)
+{
+ data = ( 0.25 0.75 )
+;
+}
+
+potential (software_glitch | droped_computer_cause)
+{
+ data = (( 0.6 0.4 )
+( 0.3 0.7 ));
+}
+
+potential (driver_malfunction | spill_water_cause)
+{
+ data = (( 0.4 0.6 )
+( 0.2 0.8 ));
+}
+
+potential (droped_computer_cause)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (spill_water_cause)
+{
+ data = ( 0.3 0.7 );
+}
+
