@@ -1,0 +1,17 @@
+veliki medved
+	-simptome
+		-blue_screen
+		-self_restart
+	-dijagnoze(racunar)
+		-ram_disconnected
+		-driver_malfunction
+		-insufficient_anti_virus
+		-virus
+		-bios_glitch
+		-fans_malfunction
+		-os_glitch
+		-gpu_overused
+	-dijagnoze(covek)
+		-using_torrent
+		-droped_computer
+		-spill_water
