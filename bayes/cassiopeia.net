@@ -13,12 +13,7 @@ node app_not_responding
      states = ("yes" "no");
 }
 
-node storage_overstuffed
-{
-     label = "C21";
-     position = (906 137);
-     states = ("yes" "no");
-}
+
 
 node corrupt_files
 {
@@ -41,12 +36,7 @@ node missing_files
      states = ("yes" "no");
 }
 
-node storage_overstuffed
-{
-     label = "C25";
-     position = (1955 0);
-     states = ("yes" "no");
-}
+
 
 node slow
 {
@@ -76,12 +66,7 @@ node insufficient_ram
      states = ("yes" "no");
 }
 
-node gpu_overused
-{
-     label = "C30";
-     position = (879 419);
-     states = ("yes" "no");
-}
+
 
 node overheating
 {

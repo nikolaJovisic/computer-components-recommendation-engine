@@ -1,4 +1,4 @@
-veliki medved
+ursa_major
 	-simptome
 		-blue_screen
 		-self_restart
@@ -13,5 +13,28 @@ veliki medved
 		-gpu_overused
 	-dijagnoze(covek)
 		-using_torrent
+		-droped_computer
+		-spill_water
+
+-cassiopeia
+	-simptomi
+		-slow
+		-app_not_responding
+		-overheating
+		-frozen_screen
+	-dijagnoze(racunar)
+		-cpu_overused
+		-insufficient_ram
+		-storage_corruption
+		-storage_overstuffed
+		-corrupt_files
+		-os_outdated
+		-missing_files
+		-gpu_overused
+		-os_glitch
+		-insufficient_cooling
+		-software_glitch
+		-driver_malfunction
+	-dijagnoze(covek)
 		-droped_computer
 		-spill_water
