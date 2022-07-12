@@ -1,5 +1,5 @@
 -ursa_major
-	-simptome
+	-simptomi
 		-blue_screen
 		-self_restart
 	-dijagnoze(racunar)
@@ -11,7 +11,7 @@
 		-fans_malfunction
 		-os_glitch
 		-gpu_overused
-	-uzrok(covek)
+	-uzroci(covek)
 		-using_torrent
 		-droped_computer
 		-spill_water
@@ -35,12 +35,17 @@
 		-insufficient_cooling
 		-software_glitch
 		-driver_malfunction
-	-uzrok(covek)
+	-uzroci(covek)
 		-droped_computer
 		-spill_water
 
 -aquarius
 	-simptomi
+		-keyboard_not_working
+		-mouse_not_working
+		-printer_not_working
+		-speakers_not_working
+	-dijagnoze(racunar)
 		-empty_battery
 		-cables_connection
 		-driver_malfunction
@@ -48,11 +53,8 @@
 		-printer_overuse
 		-speakers_malfunction
 		-software_glitch
-	-dijagnoze(racunar)
-		-keyboard_not_working
-		-mouse_not_working
-		-printer_not_working
-		-speakers_not_working
-	-uzrok(covek)
+	-uzroci(covek)
 		-left_on_sun
 		-droped_computer
+
+		

@@ -7,17 +7,17 @@ net
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
 
-node mouse_not_working
+node mouse_not_working_symptom
 {
      label = "C4";
      position = (406 422);
      states = ("yes" "no");
 }
 
-node keyboard_not_working
+node keyboard_not_working_symptom
 {
      label = "C7";
-     position = (272 211);
+     position = (275 209);
      states = ("yes" "no");
 }
 
@@ -35,7 +35,7 @@ node cables_connection
      states = ("yes" "no");
 }
 
-node speakers_not_working
+node speakers_not_working_symptom
 {
      label = "C12";
      position = (1381 191);
@@ -45,7 +45,7 @@ node speakers_not_working
 node software_glitch
 {
      label = "C13";
-     position = (1692 0);
+     position = (1692 60);
      states = ("yes" "no");
 }
 
@@ -56,7 +56,7 @@ node speakers_malfunction
      states = ("yes" "no");
 }
 
-node printer_not_working
+node printer_not_working_symptom
 {
      label = "C16";
      position = (798 700);
@@ -73,7 +73,7 @@ node driver_malfunction
 node stuck_printer_spooler
 {
      label = "C18";
-     position = (1016 540);
+     position = (1003 525);
      states = ("yes" "no");
 }
 
@@ -84,21 +84,21 @@ node printer_overuse
      states = ("yes" "no");
 }
 
-node dropped_computer
+node dropped_computer_cause
 {
      label = "C20";
      position = (888 217);
      states = ("yes" "no");
 }
 
-node left_on_sun
+node left_on_sun_cause
 {
      label = "C22";
-     position = (46 0);
+     position = (46 60);
      states = ("yes" "no");
 }
 
-potential (mouse_not_working | empty_battery driver_malfunction cables_connection)
+potential (mouse_not_working_symptom | empty_battery driver_malfunction cables_connection)
 {
  data = (((( 0.9 0.1 )
 ( 0.5 0.5 ))
@@ -110,7 +110,7 @@ potential (mouse_not_working | empty_battery driver_malfunction cables_connectio
 ( 0.15 0.85 ))));
 }
 
-potential (keyboard_not_working | empty_battery driver_malfunction cables_connection)
+potential (keyboard_not_working_symptom | empty_battery driver_malfunction cables_connection)
 {
  data = (((( 0.9 0.1 )
 ( 0.5 0.5 ))
@@ -122,19 +122,19 @@ potential (keyboard_not_working | empty_battery driver_malfunction cables_connec
 ( 0.15 0.85 ))));
 }
 
-potential (empty_battery | left_on_sun)
+potential (empty_battery | left_on_sun_cause)
 {
  data = (( 0.3 0.7 )
 ( 0.05 0.95 ));
 }
 
-potential (cables_connection | dropped_computer)
+potential (cables_connection | dropped_computer_cause)
 {
  data = (( 0.6 0.4 )
 ( 0.3 0.7 ));
 }
 
-potential (speakers_not_working | driver_malfunction speakers_malfunction software_glitch cables_connection)
+potential (speakers_not_working_symptom | driver_malfunction speakers_malfunction software_glitch cables_connection)
 {
  data = ((((( 0.97 0.03 )
 ( 0.85 0.15 ))
@@ -154,19 +154,19 @@ potential (speakers_not_working | driver_malfunction speakers_malfunction softwa
 ( 0.4 0.6 )))));
 }
 
-potential (software_glitch | left_on_sun)
+potential (software_glitch | left_on_sun_cause)
 {
  data = (( 0.5 0.5 )
 ( 0.3 0.7 ));
 }
 
-potential (speakers_malfunction | dropped_computer)
+potential (speakers_malfunction | dropped_computer_cause)
 {
  data = (( 0.3 0.7 )
 ( 0.1 0.9 ));
 }
 
-potential (printer_not_working | stuck_printer_spooler driver_malfunction printer_overuse)
+potential (printer_not_working_symptom | stuck_printer_spooler driver_malfunction printer_overuse)
 {
  data = (((( 0.93 0.07 )
 ( 0.72 0.28 ))
@@ -178,13 +178,13 @@ potential (printer_not_working | stuck_printer_spooler driver_malfunction printe
 ( 0.1 0.9 ))));
 }
 
-potential (driver_malfunction | dropped_computer)
+potential (driver_malfunction | dropped_computer_cause)
 {
  data = (( 0.4 0.6 )
 ( 0.2 0.8 ));
 }
 
-potential (stuck_printer_spooler | dropped_computer)
+potential (stuck_printer_spooler | dropped_computer_cause)
 {
  data = (( 0.6 0.4 )
 ( 0.2 0.8 ));
@@ -195,12 +195,12 @@ potential (printer_overuse)
  data = ( 0.01 0.99 );
 }
 
-potential (dropped_computer)
+potential (dropped_computer_cause)
 {
  data = ( 0.3 0.7 );
 }
 
-potential (left_on_sun)
+potential (left_on_sun_cause)
 {
  data = ( 0.01 0.99 );
 }

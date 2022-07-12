@@ -2,18 +2,17 @@ net
 {
      node_size = (0 0);
      name = "New BN";
+     tree = "(C20,C22,C23,C24,C26,C27,C28,C29,C31,C32,C33,C34,C35,C36,C37,C38,C41,C42)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
 
-node app_not_responding
+node app_not_responding_symptom
 {
      label = "C20";
-     position = (374 378);
+     position = (374 359);
      states = ("yes" "no");
 }
-
-
 
 node corrupt_files
 {
@@ -36,12 +35,10 @@ node missing_files
      states = ("yes" "no");
 }
 
-
-
-node slow
+node slow_symptom
 {
      label = "C26";
-     position = (350 101);
+     position = (349 41);
      states = ("yes" "no");
 }
 
@@ -62,13 +59,11 @@ node storage_corruption
 node insufficient_ram
 {
      label = "C29";
-     position = (559 55);
+     position = (749 144);
      states = ("yes" "no");
 }
 
-
-
-node overheating
+node overheating_symptom
 {
      label = "C31";
      position = (664 657);
@@ -85,7 +80,7 @@ node insufficient_cooling
 node os_glitch
 {
      label = "C33";
-     position = (951 571);
+     position = (1040 598);
      states = ("yes" "no");
 }
 
@@ -96,10 +91,10 @@ node gpu_overused
      states = ("yes" "no");
 }
 
-node frozen_screen
+node frozen_screen_symptom
 {
      label = "C35";
-     position = (1119 273);
+     position = (1118 291);
      states = ("yes" "no");
 }
 
@@ -124,21 +119,21 @@ node driver_malfunction
      states = ("yes" "no");
 }
 
-node droped_computer
+node droped_computer_cause
 {
      label = "C41";
      position = (1659 678);
      states = ("yes" "no");
 }
 
-node spill_water
+node spill_water_cause
 {
      label = "C42";
      position = (1403 588);
      states = ("yes" "no");
 }
 
-potential (app_not_responding | missing_files storage_overstuffed os_outdated corrupt_files)
+potential (app_not_responding_symptom | missing_files storage_overstuffed os_outdated corrupt_files)
 {
  data = ((((( 0.9 0.1 )
 ( 0.85 0.15 ))
@@ -158,11 +153,6 @@ potential (app_not_responding | missing_files storage_overstuffed os_outdated co
 ( 0.1 0.9 )))));
 }
 
-potential (storage_overstuffed)
-{
- data = ( 0.25 0.75 );
-}
-
 potential (corrupt_files)
 {
  data = ( 0.15 0.85 );
@@ -178,12 +168,7 @@ potential (missing_files)
  data = ( 0.05 0.95 );
 }
 
-potential (storage_overstuffed)
-{
- data = ( 0.25 0.75 );
-}
-
-potential (slow | storage_corruption storage_overstuffed cpu_overused insufficient_ram)
+potential (slow_symptom | storage_corruption storage_overstuffed cpu_overused insufficient_ram)
 {
  data = ((((( 0.97 0.03 )
 ( 0.55 0.45 ))
@@ -218,12 +203,7 @@ potential (insufficient_ram)
  data = ( 0.2 0.8 );
 }
 
-potential (gpu_overused)
-{
- data = ( 0.1 0.9 );
-}
-
-potential (overheating | os_glitch insufficient_cooling gpu_overused)
+potential (overheating_symptom | os_glitch insufficient_cooling gpu_overused)
 {
  data = (((( 0.99 0.01 )
 ( 0.8 0.2 ))
@@ -235,7 +215,7 @@ potential (overheating | os_glitch insufficient_cooling gpu_overused)
 ( 0.05 0.95 ))));
 }
 
-potential (insufficient_cooling | droped_computer spill_water)
+potential (insufficient_cooling | droped_computer_cause spill_water_cause)
 {
  data = ((( 0.5 0.5 )
 ( 0.2 0.8 ))
@@ -243,7 +223,7 @@ potential (insufficient_cooling | droped_computer spill_water)
 ( 0.01 0.99 )));
 }
 
-potential (os_glitch | spill_water)
+potential (os_glitch | spill_water_cause)
 {
  data = (( 0.3 0.7 )
 ( 0.1 0.9 ));
@@ -251,10 +231,11 @@ potential (os_glitch | spill_water)
 
 potential (gpu_overused)
 {
- data = ( 0.1 0.9 );
+ data = (( 0.1 0.9 )
+( 0.1 0.9 ));
 }
 
-potential (frozen_screen | storage_overstuffed driver_malfunction software_glitch gpu_overused)
+potential (frozen_screen_symptom | storage_overstuffed driver_malfunction software_glitch gpu_overused)
 {
  data = ((((( 0.9 0.1 )
 ( 0.85 0.15 ))
@@ -276,27 +257,30 @@ potential (frozen_screen | storage_overstuffed driver_malfunction software_glitc
 
 potential (storage_overstuffed)
 {
- data = ( 0.25 0.75 );
+ data = ((( 0.25 0.75 )
+( 0.25 0.75 ))
+(( 0.25 0.75 )
+( 0.25 0.75 )));
 }
 
-potential (software_glitch | droped_computer)
+potential (software_glitch | droped_computer_cause)
 {
  data = (( 0.6 0.4 )
 ( 0.3 0.7 ));
 }
 
-potential (driver_malfunction | spill_water)
+potential (driver_malfunction | spill_water_cause)
 {
  data = (( 0.4 0.6 )
 ( 0.2 0.8 ));
 }
 
-potential (droped_computer)
+potential (droped_computer_cause)
 {
  data = ( 0.3 0.7 );
 }
 
-potential (spill_water)
+potential (spill_water_cause)
 {
  data = ( 0.3 0.7 );
 }
