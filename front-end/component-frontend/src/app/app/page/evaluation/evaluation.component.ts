@@ -70,7 +70,6 @@ export class EvaluationComponent implements OnInit {
   }
 
   getResults(){
-    alert("dugme je kliknuto");
     this._componentService.getConfigurationEvaluation(this.selectedComponents.selectedCpu, this.selectedComponents.selectedGpu, this.selectedComponents.selectedRam, this.selectedComponents.selectedStorage).subscribe({
       next: (value) => {this.results = value; this.displayResults = true;},
       error: (e) => alert("Please fill in the form")

@@ -56,8 +56,8 @@
             </thead>
             <tbody>
             <tr *ngFor="let item of results">
-                <td class="border border-slate-300 ...">{{item.outputVariable}}</td>
-                <td class="border border-slate-300 ...">{{item.percentage}}</td>
+                <td class="border border-slate-300 ...">{{item.outputVariable.substr(0,item.outputVariable.length-5)}}</td>
+                <td class="border border-slate-300 ...">{{item.percentage.toFixed(2)}}</td>
             </tr>
             </tbody>
         </table>
