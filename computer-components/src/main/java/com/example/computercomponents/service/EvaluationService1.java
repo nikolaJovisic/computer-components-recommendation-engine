@@ -22,7 +22,7 @@ public class EvaluationService1 implements StandardCBRApplication {
 
 
 
-   
+
     public void configure() throws ExecutionException {
         _connector =  new EvaluationService();
 
