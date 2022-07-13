@@ -1,6 +1,7 @@
 package com.example.computercomponents.service;
 
 import com.example.computercomponents.constants.OntologyProperties;
+import com.example.computercomponents.model.ComponentDescription;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,7 @@ public class GenerateCsvService {
                 for(var gpu : gpus) {
                     var storages = componentService.getComponents("SSD").stream().limit(INSTANCE_NUM-3).collect(Collectors.toList());
                     for(var storage : storages){
-
+                        printInfo(ram,cpu,gpu,storage);
                     }
                 }
             }
@@ -43,5 +44,7 @@ public class GenerateCsvService {
         var gpuSize = Integer.parseInt(componentService.getComponentProperty(gpuName, OntologyProperties.STORAGE_SIZE).get(0));
         var DDRClass = Integer.parseInt(componentService.getComponentProperty(ramName, OntologyProperties.DDR_CLASS).get(0));
 
+        var description = new ComponentDescription(cpuName,gpuName,ramName,storageName,threadNumber,baseClock,ramSize,DDRClass,gpuHashRate,gpuSize,storageSize);
+        System.out.println(description);
     }
 }
