@@ -31,6 +31,12 @@ public class ComponentsController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    @PostMapping("/upgrade")
+    public ResponseEntity<List<String>> upgrade(@RequestBody OntologyQueryDTO ontologyQueryDTO){
+        var response = componentservice.recommendUpgrade(ontologyQueryDTO.getComponentType(),ontologyQueryDTO.getCurrentComponentName(),ontologyQueryDTO.getMotherboard());
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
     @GetMapping("/{componentName}")
     public ResponseEntity<List<String>> getComponents(@PathVariable String componentName){
         var response = componentservice.getComponents(componentName);

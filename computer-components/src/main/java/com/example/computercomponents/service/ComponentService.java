@@ -5,6 +5,7 @@ import org.apache.jena.query.ParameterizedSparqlString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -15,6 +16,23 @@ public class ComponentService {
     @Autowired
     public ComponentService(OntologyQueryService queryService) {
         this.queryService = queryService;
+    }
+
+    public List<String> recommendUpgrade(String componentType,String currentComponentName,String motherboard){
+        String property = "memorySize";
+        if(componentType.equals("CPU"))
+            property="threadNumber";
+
+        var betterComponents = getBetterComponents(currentComponentName,property);
+
+        var compatibleComponents = getMotherboardCompatibleComponents(componentType,motherboard);
+
+        var retVal = new ArrayList<String>();
+        for(var betterComponent: betterComponents)
+            if(compatibleComponents.contains(betterComponent))
+                retVal.add(betterComponent);
+
+        return retVal;
     }
 
     public List<String> getMotherboardCompatibleComponents(String componentName,String motherboard){
