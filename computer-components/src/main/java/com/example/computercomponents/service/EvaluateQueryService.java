@@ -1,11 +1,14 @@
 package com.example.computercomponents.service;
 
 import com.example.computercomponents.constants.OntologyProperties;
+import com.example.computercomponents.controller.dto.EvaluationResponseDTO;
 import com.example.computercomponents.model.ComponentDescription;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ucm.gaia.jcolibri.cbraplications.StandardCBRApplication;
 import ucm.gaia.jcolibri.cbrcore.CBRQuery;
+
+import java.util.List;
 
 @Service
 public class EvaluateQueryService {
@@ -17,7 +20,7 @@ public class EvaluateQueryService {
         this.componentService = componentService;
     }
 
-    public void Evaluate(String cpuName, String gpuName, String storageName, String ramName){
+    public List<EvaluationResponseDTO> Evaluate(String cpuName, String gpuName, String storageName, String ramName){
         var threadNumber = Integer.parseInt(componentService.getComponentProperty(cpuName, OntologyProperties.THREAD_NUM).get(0));
         var baseClock = Double.parseDouble(componentService.getComponentProperty(cpuName, OntologyProperties.BASE_CLOCK).get(0));
         var gpuHashRate = Double.parseDouble(componentService.getComponentProperty(gpuName, OntologyProperties.HASH_RATE).get(0));
@@ -54,9 +57,11 @@ public class EvaluateQueryService {
             recommender.cycle(query);
 
             recommender.postCycle();
+            return EvaluationService1.response;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 
 }

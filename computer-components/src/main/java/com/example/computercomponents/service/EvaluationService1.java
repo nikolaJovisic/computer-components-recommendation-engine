@@ -1,5 +1,6 @@
 package com.example.computercomponents.service;
 
+import com.example.computercomponents.controller.dto.EvaluationResponseDTO;
 import com.example.computercomponents.model.ComponentDescription;
 import ucm.gaia.jcolibri.casebase.LinealCaseBase;
 import ucm.gaia.jcolibri.cbraplications.StandardCBRApplication;
@@ -13,12 +14,15 @@ import ucm.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Interval;
 import ucm.gaia.jcolibri.method.retrieve.RetrievalResult;
 import ucm.gaia.jcolibri.method.retrieve.selection.SelectCases;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class EvaluationService1 implements StandardCBRApplication {
     Connector _connector;
     CBRCaseBase _caseBase;
     NNConfig simConfig;
+    public static List<EvaluationResponseDTO> response;
 
 
 
@@ -41,11 +45,13 @@ public class EvaluationService1 implements StandardCBRApplication {
     }
 
     public void cycle(CBRQuery query) throws ExecutionException {
+        response = new ArrayList<>();
         Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
         eval = SelectCases.selectTopKRR(eval, 5);
         System.out.println("Retrieved cases:");
-        for (RetrievalResult nse : eval)
+        for (RetrievalResult nse : eval){
             System.out.println(nse.get_case().getDescription() + " -> " + nse.getEval());
+        }
     }
 
     public void postCycle() throws ExecutionException {
