@@ -1,6 +1,9 @@
 package com.example.computercomponents.model;
 
-public class ComponentDescription {
+import ucm.gaia.jcolibri.cbrcore.Attribute;
+import ucm.gaia.jcolibri.cbrcore.CaseComponent;
+
+public class ComponentDescription implements CaseComponent {
     private String cpuName;
     private String gpuName;
     private String ramName;
@@ -43,6 +46,11 @@ public class ComponentDescription {
                 ", gpuSize=" + gpuSize +
                 ", storageSize=" + storageSize +
                 '}';
+    }
+
+    @Override
+    public Attribute getIdAttribute() {
+        return new Attribute("id",this.getClass());
     }
 
     public ComponentDescription() {
