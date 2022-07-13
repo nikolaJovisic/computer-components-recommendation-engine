@@ -1,4 +1,4 @@
-<div class="flex flex-col w-80">
+<div class="flex flex-col w-auto">
     
     <div class="flex flex-row mt-5">
         <select [(ngModel)]="selectedComponents.selectedCpu" id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -40,7 +40,7 @@
     <!---->
     <div *ngIf="displayResults">
         <label class="text-blue-700 mt-8">Results</label>
-        <table class="border-separate border-spacing-1 border w-96 border-slate-400 ...">
+        <table class="border-separate border-spacing-1 border w-auto border-slate-400 ...">
             <thead>
                 <tr>
                     <th class="border border-slate-300 ...">Cpu name</th>
