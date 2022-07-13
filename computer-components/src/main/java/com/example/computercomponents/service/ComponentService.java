@@ -25,7 +25,8 @@ public class ComponentService {
 
         var betterComponents = getBetterComponents(currentComponentName,property);
 
-        var compatibleComponents = getMotherboardCompatibleComponents(componentType,motherboard);
+        var fixedType = componentType.equals("GraphicsCard") ? "GPU" : componentType;
+        var compatibleComponents = getMotherboardCompatibleComponents(fixedType ,motherboard);
 
         var retVal = new ArrayList<String>();
         for(var betterComponent: betterComponents)
