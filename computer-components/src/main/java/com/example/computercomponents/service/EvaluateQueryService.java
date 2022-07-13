@@ -20,7 +20,7 @@ public class EvaluateQueryService {
         this.componentService = componentService;
     }
 
-    public List<EvaluationResponseDTO> Evaluate(String cpuName, String gpuName, String storageName, String ramName){
+    public List<EvaluationResponseDTO> evaluate(String cpuName, String gpuName, String storageName, String ramName){
         var threadNumber = Integer.parseInt(componentService.getComponentProperty(cpuName, OntologyProperties.THREAD_NUM).get(0));
         var baseClock = Double.parseDouble(componentService.getComponentProperty(cpuName, OntologyProperties.BASE_CLOCK).get(0));
         var gpuHashRate = Double.parseDouble(componentService.getComponentProperty(gpuName, OntologyProperties.HASH_RATE).get(0));
@@ -29,7 +29,7 @@ public class EvaluateQueryService {
         var gpuSize = Integer.parseInt(componentService.getComponentProperty(gpuName, OntologyProperties.STORAGE_SIZE).get(0));
         var DDRClass = Integer.parseInt(componentService.getComponentProperty(ramName, OntologyProperties.DDR_CLASS).get(0));
 
-        StandardCBRApplication recommender = new EvaluationService1();
+        StandardCBRApplication recommender = new EvaluationServiceExtended();
 
         try {
             recommender.configure();
@@ -57,7 +57,7 @@ public class EvaluateQueryService {
             recommender.cycle(query);
 
             recommender.postCycle();
-            return EvaluationService1.response;
+            return EvaluationServiceExtended.response;
         } catch (Exception e) {
             e.printStackTrace();
         }

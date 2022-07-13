@@ -23,8 +23,8 @@ public class EvaluateController {
     }
 
     @PostMapping()
-    public ResponseEntity<List<EvaluationResponseDTO>> doSomethink(@RequestBody FuzzyComponentQueryDTO queryDTO){
-        return new ResponseEntity<>(evaluationService.Evaluate(queryDTO.getCpuName(),queryDTO.getGpuName(),queryDTO.getStorageName(),queryDTO.getRamName()), HttpStatus.OK);
+    public ResponseEntity<List<EvaluationResponseDTO>> evaluate(@RequestBody FuzzyComponentQueryDTO queryDTO){
+        return new ResponseEntity<>(evaluationService.evaluate(queryDTO.getCpuName(),queryDTO.getGpuName(),queryDTO.getStorageName(),queryDTO.getRamName()), HttpStatus.OK);
     }
 
 }

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class EvaluationService1 implements StandardCBRApplication {
+public class EvaluationServiceExtended implements StandardCBRApplication {
     Connector _connector;
     CBRCaseBase _caseBase;
     NNConfig simConfig;
@@ -50,6 +50,8 @@ public class EvaluationService1 implements StandardCBRApplication {
         eval = SelectCases.selectTopKRR(eval, 5);
         System.out.println("Retrieved cases:");
         for (RetrievalResult nse : eval){
+            var description = (ComponentDescription)nse.get_case().getDescription();
+            response.add(new EvaluationResponseDTO(description.getCpuName(),description.getGpuName(),description.getRamName(),description.getStorageName(), nse.getEval()));
             System.out.println(nse.get_case().getDescription() + " -> " + nse.getEval());
         }
     }
