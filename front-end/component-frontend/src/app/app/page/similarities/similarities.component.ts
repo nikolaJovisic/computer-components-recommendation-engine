@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentService } from '../../services/component-service.service';
+import { EvaluateService } from '../../services/evaluate.service';
 
 @Component({
   selector: 'app-similarities',
@@ -23,7 +24,7 @@ export class SimilaritiesComponent implements OnInit {
     selectedStorage: 'Select storage'
   };
 
-  constructor(private _componentService: ComponentService) { }
+  constructor(private _componentService: ComponentService,private _evaluateService: EvaluateService) { }
 
   ngOnInit(): void {
     this.getMotherboards();
@@ -69,8 +70,10 @@ export class SimilaritiesComponent implements OnInit {
   }
 
   getResults(){
-    alert("BLA")
-    this.displayResults=true;
+    this._evaluateService.getSimilarConfiguration(this.selectedComponents.selectedCpu,this.selectedComponents.selectedGpu,this.selectedComponents.selectedRam,this.selectedComponents.selectedStorage).subscribe({
+      next: (value) => {this.results = value; this.displayResults = true;},
+      error: (e) => alert("Please fill in the form!")
+    })
   }
 
   
