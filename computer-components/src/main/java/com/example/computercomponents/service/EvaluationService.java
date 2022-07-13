@@ -12,14 +12,8 @@ import ucm.gaia.jcolibri.util.FileIO;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 @Service
 public class EvaluationService implements Connector{
 
@@ -42,7 +36,9 @@ public class EvaluationService implements Connector{
             while ((line = br.readLine()) != null) {
                 if (line.startsWith("#") || (line.length() == 0))
                     continue;
-                String[] values = line.split(";");
+                String[] values = line.split(",");
+
+
 
                 CBRCase cbrCase = new CBRCase();
 
@@ -50,17 +46,17 @@ public class EvaluationService implements Connector{
 
 
                 // TODO
-                componentDescription.setCpuName(values[0]);
-                componentDescription.setGpuName(values[1]);
-                componentDescription.setRamName(values[2]);
-                componentDescription.setStorageName(values[3]);
-                componentDescription.setThreadNum(Integer.parseInt(values[4]));
-                componentDescription.setBaseClock(Double.parseDouble(values[5]));
-                componentDescription.setRamSize(Integer.parseInt(values[6]));
-                componentDescription.setDDRClass(Integer.parseInt(values[7]));
-                componentDescription.setGpuHashRate(Double.parseDouble(values[8]));
-                componentDescription.setGpuSize(Integer.parseInt(values[9]));
-                componentDescription.setStorageSize(Integer.parseInt(values[10]));
+                componentDescription.setCpuName(values[2].substring(1,values[2].length()-1));
+                componentDescription.setGpuName(values[4].substring(1,values[4].length()-1));
+                componentDescription.setRamName(values[6].substring(1,values[6].length()-1));
+                componentDescription.setStorageName(values[8].substring(1,values[8].length()-1));
+                componentDescription.setThreadNum(Integer.parseInt(values[10].substring(1,values[10].length()-1)));
+                componentDescription.setBaseClock(Double.parseDouble(values[1].substring(1,values[1].length()-1)));
+                componentDescription.setRamSize(Integer.parseInt(values[7].substring(1,values[7].length()-1)));
+                componentDescription.setDDRClass(Integer.parseInt(values[0].substring(1,values[0].length()-1)));
+                componentDescription.setGpuHashRate(Double.parseDouble(values[3].substring(1,values[3].length()-1)));
+                componentDescription.setGpuSize(Integer.parseInt(values[5].substring(1,values[5].length()-1)));
+                componentDescription.setStorageSize(Integer.parseInt(values[9].substring(1,values[9].length()-1)));
 
 
 
