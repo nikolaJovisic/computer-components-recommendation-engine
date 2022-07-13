@@ -17,7 +17,7 @@ public class EvaluateController {
         this.evaluationService = evaluationService;
     }
 
-    @GetMapping()
+    @PostMapping()
     public void doSomethink(@RequestBody FuzzyComponentQueryDTO queryDTO){
         evaluationService.Evaluate(queryDTO.getCpuName(),queryDTO.getGpuName(),queryDTO.getStorageName(),queryDTO.getRamName());
     }
