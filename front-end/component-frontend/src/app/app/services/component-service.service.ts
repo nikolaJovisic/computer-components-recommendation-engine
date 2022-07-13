@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class ComponentService {
 
   private url: string = "/components"
+  private url1: string = "/fuzzy"
   constructor(private http: HttpClient) { }
 
   getComponent(componentType: string): Observable<string[]>{
@@ -25,7 +26,16 @@ export class ComponentService {
     return this.http.post<string[]>(environment.host + this.url + '/upgrade',upgradeQueryDto);
   }
 
- 
+  getConfigurationEvaluation(cpuName: string, gpuName: string, ramName: string, storageName: string): Observable<any[]>{
+    let evaluateQueryDto: EvaluateQueryDTO;
+    evaluateQueryDto = {
+      cpuName: cpuName,
+      gpuName: gpuName,
+      ramName: ramName,
+      storageName: storageName
+    }
+    return this.http.post<any[]>(environment.host + this.url1 + '/components', evaluateQueryDto);
+  }
   
 }
 
@@ -33,4 +43,11 @@ interface UpgradeQueryDTO{
   componentType: string;
   currentComponentName: string;
   motherboard: string;
+}
+
+interface EvaluateQueryDTO{
+  cpuName: string;
+  gpuName: string;
+  ramName: string;
+  storageName: string;
 }
