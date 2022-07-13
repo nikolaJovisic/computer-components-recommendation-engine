@@ -13,6 +13,38 @@ public class ComponentDescription {
     private int gpuSize;
     private int storageSize;
 
+
+    public ComponentDescription(String cpuName, String gpuName, String ramName, String storageName, int threadNum, double baseClock, int ramSize, int DDRClass, double gpuHashRate, int gpuSize, int storageSize) {
+        this.cpuName = cpuName;
+        this.gpuName = gpuName;
+        this.ramName = ramName;
+        this.storageName = storageName;
+        this.threadNum = threadNum;
+        this.baseClock = baseClock;
+        this.ramSize = ramSize;
+        this.DDRClass = DDRClass;
+        this.gpuHashRate = gpuHashRate;
+        this.gpuSize = gpuSize;
+        this.storageSize = storageSize;
+    }
+
+    @Override
+    public String toString() {
+        return "ComponentDescription{" +
+                "cpuName='" + cpuName + '\'' +
+                ", gpuName='" + gpuName + '\'' +
+                ", ramName='" + ramName + '\'' +
+                ", storageName='" + storageName + '\'' +
+                ", threadNum=" + threadNum +
+                ", baseClock=" + baseClock +
+                ", ramSize=" + ramSize +
+                ", DDRClass=" + DDRClass +
+                ", gpuHashRate=" + gpuHashRate +
+                ", gpuSize=" + gpuSize +
+                ", storageSize=" + storageSize +
+                '}';
+    }
+
     public ComponentDescription() {
     }
 
