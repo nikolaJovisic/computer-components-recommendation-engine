@@ -1,26 +1,35 @@
 package com.example.computercomponents.service;
 
-import java.net.URL;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
+import com.example.computercomponents.model.ComponentDescription;
+import com.fasterxml.jackson.core.type.TypeReference;
+import org.springframework.stereotype.Service;
 import ucm.gaia.jcolibri.cbrcore.CBRCase;
 import ucm.gaia.jcolibri.cbrcore.CaseBaseFilter;
 import ucm.gaia.jcolibri.cbrcore.Connector;
 import ucm.gaia.jcolibri.exception.InitializingException;
 import ucm.gaia.jcolibri.util.FileIO;
-import com.example.computercomponents.model.ComponentDescription;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.Collection;
+import java.util.LinkedList;
+
+@Service
 public class EvaluationService implements Connector{
+
+
+    public EvaluationService() {
+        retrieveAllCases();
+    }
 
     @Override
     public Collection<CBRCase> retrieveAllCases() {
         LinkedList<CBRCase> cases = new LinkedList<CBRCase>();
 
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(FileIO.openFile("data/example.csv")));
+            var path = TypeReference.class.getResource(com.example.computercomponents.constants.URL.CSV_PATH).toURI().getPath() + "/test.csv";
+            BufferedReader br = new BufferedReader(new InputStreamReader(FileIO.openFile(path.substring(1))));
             if (br == null)
                 throw new Exception("Error opening file");
 
