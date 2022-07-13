@@ -36,6 +36,17 @@ export class ComponentService {
     }
     return this.http.post<any[]>(environment.host + this.url1 + '/components', evaluateQueryDto);
   }
+
+  getSimilarConfiguration(cpuName: string, gpuName: string, ramName: string, storageName: string){
+    let similarQueryDTO: SimilarQueryDTO;
+    similarQueryDTO = {
+      cpuName: cpuName,
+      gpuName: gpuName,
+      ramName: ramName,
+      storageName: storageName
+    }
+  }
+
   
 }
 
@@ -46,6 +57,13 @@ interface UpgradeQueryDTO{
 }
 
 interface EvaluateQueryDTO{
+  cpuName: string;
+  gpuName: string;
+  ramName: string;
+  storageName: string;
+}
+
+interface SimilarQueryDTO{
   cpuName: string;
   gpuName: string;
   ramName: string;
