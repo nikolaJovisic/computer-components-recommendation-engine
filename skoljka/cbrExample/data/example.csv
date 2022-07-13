@@ -1,0 +1,21 @@
+#brend procesora;naziv procesora;radni takt procesora;tip radne memorije;velicina radne memorije;tip masovne memorije;velicina masovne memorije;naziv graficke;velicina graficke;broj core-ova;tip connector-a
+AMD;Ryzen5-5600;3.5;DDR3;4;HDD;1000;AMD-Radeon-RX-6500-XT;4;1024;8-pin connector
+AMD;Ryzen5-5600G;3.9;DDR4;8;HDD;8000;GTX-1080Ti;11;3584;ProCool connector
+AMD;Ryzen7-3700X;3.6;DDR4;8;HDD;6000;AMD-Radeon-RX-6700-XT;12;2304;8-pin connector
+AMD;Ryzen7-3800X;3.9;DDR4;32;SSD;500;nVidia-GeForce-GTX-1050Ti;4;768;24-pin ATX connector
+AMD;Ryzen9-5900;3.4;DDR3;8;SSD;960;GeForce-GT-1030;2;1468;ProCool connector
+Intel;i3-12100;3.3;DDR4;16;SSD;240;GeForce-GTX-1660;6;1536;ProCool connector
+Intel;i3-6100;3.7;DDR4;8;SSD;2000;Dual-Radeon-RX-6500;4;1024;8-pin connector
+Intel;i5-10600;3.3;DDR4;8;SSD;2000;nVidia-GeForce-RTX-2060;6;1920;ProCool connector
+Intel;i5-8400;2.8;DDR5;16;HDD;500;GeForce-RTX-3080-MASTER;10;8704;24-pin ATX connector
+Intel;i7-11700KF;3.6;DDR4;32;HDD;6000;GeForce-RTX3080;10;7659;8-pin connector
+Intel;i7-4790;4.0;DDR5;16;SSD;500;GTX-1660Ti;6;1536;24-pin ATX connector
+Intel;i7-4790K;4.4;DDR3;8;SSD;240;GTX-1060;6;1280;8-pin connector
+Intel;i7-6700K;4.0;DDR4;8;HDD;14000;GTX-730;4;384;24-pin ATX connector
+Intel;i7-8700;3.2;DDR3;12;HDD;8000;nVidia-GeForce-GTX-1050Ti;4;768;ProCool connector
+Intel;i7-8700K;3.7;DDR3;8;HDD;1000;GTX-1080;8;2560;ProCool connector
+Intel;i7-9700;3.0;DDR4;16;SSD;1000;GTX-950;2;768;8-pin connector
+Intel;i9-12900KF;3.2;DDR4;8;SSD;500;GeForce-RTX3080;10;7659;24-pin ATX connector
+Intel;i9-9900K;3.6;DDR5;16;HDD;500;nVidia-GeForce-GTX-1050Ti;4;768;ProCool connector
+Intel;Pentium-Gold-G6400;4.0;DDR4;32;HDD;1000;GTX-3080;10;8704;24-pin ATX connector
+AMD;Ryzen9-5950X;3.7;DDR5;16;SSD;2000;AMD-Radeon-RX-6700-XT;12;2304;8-pin connector
