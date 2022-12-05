@@ -172,6 +172,7 @@ goto end
 set ERROR_CODE=1
 
 :end
+pause
 @endlocal & set ERROR_CODE=%ERROR_CODE%
 
 if not "%MAVEN_SKIP_RC%"=="" goto skipRcPost
